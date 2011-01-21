@@ -356,14 +356,16 @@ textarea.wiki-edit { font-family: Arial, Verdana, Serif; font-size: larger; back
 	padding-left: 0;
 	background: none;
 }
-#content .splitcontentright .projects.box > ul > li:first-line{
+#content .splitcontentright .projects.box > ul > li:first-line, 
+#content .splitcontentleft .news.box  p > a + a,
+#content .splitcontentright .news.box p > a {
 	font-weight: bold;
 	font-size: 13px;
 }
 
-#content .splitcontentleft .news.box  p > a + a{
-	font-size: 13px;
-	font-weight: bold;
+#content .splitcontentright .news.box p > a[href^="/projects/"]{
+	font-size: 12px;
+	font-weight: normal;
 }
 
 ul{ margin-left: 20px; padding-left: 0; }
