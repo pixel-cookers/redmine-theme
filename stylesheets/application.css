@@ -337,6 +337,11 @@ tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
 
 tr.closed, table.list tr.issue.closed a{ color: #999; }
 
+td.username img.gravatar {
+	float: none;
+	vertical-align: middle;
+}
+
 /* Fields */
 input[type="text"], input[type="password"], textarea, select { padding: 2px; border: 1px solid #d7d7d7; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
 input[type="text"], input[type="password"], select { padding: 4px; }
