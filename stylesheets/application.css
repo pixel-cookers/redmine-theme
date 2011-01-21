@@ -466,6 +466,9 @@ table.progress tr td.closed{
 	padding: 0;
 }
 
+#content > .contextual > *:first-child{ margin-left: 15px; }
+#content > .contextual > *:last-child{ margin-right: 15px; }
+
 #content div[style="clear: both;"] + .contextual{ 
 	border: none;
 }
