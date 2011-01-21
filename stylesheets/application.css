@@ -592,10 +592,10 @@ tr.message.sticky td.subject {
 .icon-home { background-image: url(../images/icons/home.png); }
 .icon-user { background-image: url(../images/icons/user-black.png); }
 .icon-mypage { background-image: url(../images/icons/dashboard.png); }
-.icon-admin { background-image: url(../images/icons/hammer-screwdriver.png); } }
-.icon-projects {}
+.icon-admin { background-image: url(../images/icons/hammer-screwdriver.png); }
+.icon-projects { background-image: url(../images/icons/block.png); }
 .icon-help { background-image: url(../images/icons/information.png); }
-.icon-attachment {}
+.icon-attachment { background-image: url(../images/icons/paper-clip.png); }
 .icon-index { background-image: url(../images/icons/document-list.png); }
 .icon-history {}
 .icon-time { background-image: url(../images/icons/clock.png); }
@@ -609,7 +609,7 @@ tr.message.sticky td.subject {
 .icon-checked { background-image: url(../images/icons/tick.png); }
 .icon-details { background-image: url(../images/icons/magnifier-zoom.png); }
 .icon-report { background-image: url(../images/icons/report.png); }
-.icon-comment {}
+.icon-comment { background-image: url(../images/icons/balloon-left.png); }
 
 div.projects h3 {
 	background: none;
