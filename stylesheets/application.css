@@ -524,6 +524,10 @@ div.issue.priority-5, div.issue.priority-6{ background: #FFEEEE; border-color: #
 	font-weight: bold;
 }
 
+#activity .issue-closed, #activity .closed {
+	text-decoration: line-through;
+}
+
 /* Forum */
 
 p.breadcrumb {
@@ -655,16 +659,16 @@ table.boards a.board, h3.comments {
 
 dt.issue { background-image: url(../images/icons/ticket.png); }
 dt.issue-edit { background-image: url(../images/icons/ticket--pencil.png); }
-dt.issue-closed { background-image: url(../images/icons/ticket--arrow.png); }
+dt.issue-closed, dt.issue.closed { background-image: url(../images/icons/ticket--arrow.png); }
 dt.issue-note { background-image: url(../images/icons/sticky-note-pin.png); }
 dt.changeset { background-image: url(../images/icons/gear.png); }
-dt.news {}
+dt.news { background-image: url(../images/icons/newspapers.png); }
 dt.message { background-image: url(../images/icons/ballon.png); }
 dt.reply { background-image: url(../images/icons/ballons.png); }
 dt.wiki-page { background-image: url(../images/icons/document--pencil.png); }
-dt.attachment {}
+dt.attachment { background-image: url(../images/icons/paper-clip.png); }
 dt.document { background-image: url(../images/icons/document.png); }
-dt.project {}
+dt.project { background-image: url(../images/icons/block.png); }
 
 a.feed{}
 
