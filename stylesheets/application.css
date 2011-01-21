@@ -460,7 +460,7 @@ table.progress tr td.closed{
 	margin: 3px 0 0 0;
 	position: relative;
 	z-index: 2;
-	padding: 0;
+	padding: 0 15px;
 }
 
 #content div[style="clear: both;"] + .contextual{ 
@@ -472,8 +472,6 @@ table.progress tr td.closed{
 	padding-top: 10px;
 	padding-bottom: 11px;
 }
-#content > .contextual > *:first-child{ margin-left: 15px; }
-#content > .contextual > *:last-child{ margin-right: 15px; }
 
 .contextual input[type='text']{ padding: inherit; margin: 0 }
 .contextual input[type='submit']{ padding: 1px 7px !important; margin: 0 }
