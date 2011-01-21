@@ -369,7 +369,7 @@ textarea.wiki-edit { font-family: Arial, Verdana, Serif; font-size: larger; back
 ul{ margin-left: 20px; padding-left: 0; }
 ul li{
 	list-style: none;
-	background:transparent url(../images/icons/bullet_black.png) no-repeat scroll left center;
+	background:transparent url(../images/icons/bullet_black.png) no-repeat scroll left 5px;
 	padding:4px 0 4px 20px;
 }
 ul.projects.root li.root{
