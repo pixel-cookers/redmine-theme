@@ -32,6 +32,7 @@ a.issue.closed, a.issue.closed:link, a.issue.closed:visited{
 	background:transparent;
 	color:#888888;
 	font-size:11px;
+	left: 0;
 	padding: 0 0 0 9px;
 	position:absolute;
 	top:37px;
@@ -462,7 +463,7 @@ table.progress tr td.closed{
 	margin: 3px 0 0 0;
 	position: relative;
 	z-index: 2;
-	padding: 0 15px;
+	padding: 0;
 }
 
 #content div[style="clear: both;"] + .contextual{ 
