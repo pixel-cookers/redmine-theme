@@ -471,8 +471,9 @@ table.progress tr td.closed{
 	padding: 0;
 }
 
+/*#content > .contextual > *:last-child{ margin-right: 15px; } Doesn't work on webkit browsers, next line will do the trick */
+#content > .contextual > *{ margin-left: -15px; margin-right: 15px }
 #content > .contextual > *:first-child{ margin-left: 15px; }
-#content > .contextual > *:last-child{ margin-right: 15px; }
 
 #content div[style="clear: both;"] + .contextual{ 
 	border: none;
