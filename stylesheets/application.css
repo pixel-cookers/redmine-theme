@@ -264,7 +264,10 @@ h3, h4 {
 }
 #main-menu li a:hover { 
 	background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x; 
-	padding-right: 25px; 
+	padding-right: 25px;
+	-webkit-transition: padding-right 200ms linear;
+	-moz-transition: padding-right 200ms linear;
+	transition: padding-right 200ms linear;
 }
 #main-menu li a.selected, #main-menu li a.selected:hover { 
 	background: #f3f3f3;
@@ -529,7 +532,7 @@ div.flash.error, #errorExplanation{
 /* Issues */
 div.issue{ background: #F5FCFC }
 fieldset#filters, fieldset#date-range { background: #F5FCFC }
-table.list td { vertical-align: middle; }
+table.list td, fieldset#filters td.add-filter { vertical-align: middle; }
 div.issue.priority-3, div.issue.priority-4{ border-color: #DF8F8F }
 div.issue.priority-5, div.issue.priority-6{ background: #FFEEEE; border-color: #DF8F8F }
 /* Activity */
