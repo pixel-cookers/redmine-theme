@@ -137,7 +137,8 @@ a.issue.closed, a.issue.closed:link, a.issue.closed:visited{
 	border: 1px solid #CCCCCC;
 	border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
 	margin:0 0 20px;
-	overflow: auto;
+	/*overflow: auto;*/
+	position: relative;
 	width: 81%; 
 }
 #main.nosidebar #content {
@@ -693,6 +694,29 @@ a.feed{}
 
 .close-icon {}
 a.close-icon:hover {}
+
+/*---------- Only Pixel Cookers Theme ----------*/
+
+#sidebar_btn{
+	background: transparent url(../images/menu-arrows.png) no-repeat scroll right -34px;
+	cursor: w-resize;
+	height: 20px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	right: -21.5%;
+	top: -11px;
+	width: 18%;
+}
+#main.nosidebar #sidebar_btn{
+	background-position: left 5px;
+	right: -30px;
+	width: 25px;
+}
+#sidebar{
+	border-top: 1px solid #dcdcdc;
+}
+
 
 /*---------- Colors ----------*/
 
