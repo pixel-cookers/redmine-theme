@@ -1,7 +1,7 @@
 /**
  * Pixel Cookers stylesheet for Redmine
  * author: Ludovic Meyer, Pixel Cookers - http://www.pixel-cookers.com
- * v1.2
+ * v1.3
  */
 
 @import url(../../../stylesheets/application.css);
@@ -342,6 +342,13 @@ tr.priority-1 a { color: #559; }
 tr.odd.priority-1 td, tr.even.priority-1 td { border-color: #add7f3; }
 
 tr.closed, table.list tr.issue.closed a{ color: #999; }
+
+table.list tbody tr:hover,
+table.list tbody tr.group:hover { 
+	-webkit-transition: background-color 150ms linear;
+	-moz-transition: background-color 150ms linear;
+	transition: background-color 150ms linear;
+}
 
 td.username img.gravatar {
 	float: none;
