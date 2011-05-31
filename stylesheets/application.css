@@ -555,11 +555,17 @@ div.issue.priority-5, div.issue.priority-6{ background: #FFEEEE; border-color: #
 	text-decoration: line-through;
 }
 
+/* Timelog */
+
+body.controller-timelog div#content form#query_form fieldset#date-range{
+	margin-top: 25px;
+}
+
 /* Forum */
 
 p.breadcrumb {
 	font-size:0.9em;
-	margin:-6px -10px 6px;
+	margin:-3px -16px 6px;
 	padding:6px;
 	position: absolute;
 	text-indent:15px;
@@ -573,6 +579,10 @@ p.breadcrumb {
 	top: -1px;
 	z-index: 1;
 }
+
+p.subtitle{
+	margin-top: 26px;
+	margin-left: 10px;
 
 tr.message.sticky td.subject {
 	background:url("../images/icons/arrow.png") no-repeat scroll 1px 55% transparent;
