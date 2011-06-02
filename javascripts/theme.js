@@ -6,11 +6,12 @@
 
 Event.observe(window, 'load', function() {
 	var sidebar_btn = new Element('div', { 'id': 'sidebar_btn', onclick: 'toogle_sidebar();' }).update("&nbsp;");
-	var elem = $$('#main:not(.nosidebar) #content')[0];
+	var elem = $$('#main:not(.nosidebar) #sidebar')[0];
+	
 	var cookie = new Cookies();
 	
-	if(elem != undefined){ 
-		elem.appendChild(sidebar_btn); 
+	if(elem != undefined){
+		elem.insert({'before' : sidebar_btn});
 		if (cookie.get('hide_sidebar')=='yes') {
 			$('main').toggleClassName('nosidebar');
 		}	

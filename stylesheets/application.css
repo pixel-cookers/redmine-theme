@@ -138,7 +138,7 @@ a.issue.closed, a.issue.closed:link, a.issue.closed:visited{
 	border-radius:6px; -moz-border-radius:6px; -webkit-border-radius:6px;
 	margin:0 0 20px;
 	/*overflow: auto;*/
-	position: relative;
+	/*position: relative;*/
 	width: 81%; 
 }
 #main.nosidebar #content {
@@ -564,11 +564,11 @@ body.controller-timelog div#content form#query_form fieldset#date-range{
 /* Forum */
 
 p.breadcrumb {
-	font-size:0.9em;
-	margin:-3px -16px 6px;
+	font-size:1.1em;
+	margin:-6px -16px 0;
 	padding:6px;
 	position: absolute;
-	text-indent:15px;
+	text-indent: 5px;
 	top: 50px;
 }
 
@@ -581,8 +581,9 @@ p.breadcrumb {
 }
 
 p.subtitle{
-	margin-top: 26px;
+	margin-top: 0;
 	margin-left: 10px;
+}
 
 tr.message.sticky td.subject {
 	background:url("../images/icons/arrow.png") no-repeat scroll 1px 55% transparent;
@@ -721,14 +722,13 @@ a.close-icon:hover {}
 	margin: 0;
 	padding: 0;
 	position: absolute;
-	right: -21.5%;
-	top: -11px;
-	width: 18%;
+	right: 10px;
+	top: 60px;
+	width: 13%;
 }
 #main.nosidebar #sidebar_btn{
 	background-position: left 5px;
-	right: -30px;
-	width: 25px;
+	width: 15px;
 }
 #sidebar{
 	border-top: 1px solid #dcdcdc;
@@ -754,7 +754,7 @@ fieldset#filters, fieldset#date-range { background-color: #F5FCFC }
 .box { background-color:#F5FCFC; }
 
 
-/*
+/* == Colors change example == 
 
 a, a:link, a:visited { color: #cc0000 }
 #footer a, #footer a:link, #footer a:visited  { color: #cc0000 }
