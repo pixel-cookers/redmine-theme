@@ -478,6 +478,11 @@ div.wiki pre {
 	padding: 3px;
 }
 
+div.wiki ul.toc {
+	background-color: #FDFDFD;
+	border: 1px solid #CCC;
+}
+
 
 table.progress tr td.closed{
 	background-image:url("../images/progress.png");
