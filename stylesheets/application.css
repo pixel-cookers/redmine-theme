@@ -173,7 +173,8 @@ a.issue.closed, a.issue.closed:link, a.issue.closed:visited{
 }
 
 /* Headers */
-#content h2{
+#content h2,
+#content .wiki h1{
 	background: #DDDDDD url("../images/awesome-overlay-sprite.png") repeat-x scroll 0 -50px; 
 	border-bottom: 1px solid #CCCCCC;
 	color: #000;
@@ -181,7 +182,8 @@ a.issue.closed, a.issue.closed:link, a.issue.closed:visited{
 	margin:-5px -10px 10px;
 	padding: 10px 15px;
 }
-#content h2:first-child{
+#content h2:first-child,
+#content .wiki h1:first-child{
 	border-radius: 6px 6px 0 0;
 	-moz-border-radius-bottomleft:0; -webkit-border-bottom-left-radius: 0px;
 	-moz-border-radius-bottomright:0; -webkit-border-bottom-right-radius: 0px;
@@ -203,18 +205,20 @@ h2, h3, h4, .wiki h1, .wiki h2, .wiki h3 {
 	border-bottom: 0px;
 }
 
-.wiki h1, .wiki h3 { 
+.wiki h2, .wiki h3 { 
 	font-family:"Trebuchet MS",Verdana,sans-serif; 
 	font-weight: bold; 
 }
-#content .wiki h1 { 
-	background: #edf3fe; 
-	color: #000000; 
-	font-size: 14px; 
+#content .wiki h2 { 
+	background: #edf3fe;
+	border-top: 1px solid #e3ecfc;
+	border-bottom: 1px solid #d2e1fc;
+	color: #000000;
+	font-size: 16px; 
 	margin: -6px -10px 10px; 
 	padding: 10px 20px; 
 }
-h3, .wiki h2 { 
+h3, .wiki h1 { 
 	font-size: 18px; 
 }
 h3, h4 { 
@@ -467,6 +471,8 @@ select{
 	color:#333333;
 	font-size:13px;
 }
+
+/* wiki */
 
 div.wiki pre {
 	padding: 3px;
