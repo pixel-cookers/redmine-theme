@@ -398,11 +398,18 @@ textarea.wiki-edit { font-family: Arial, Verdana, Serif; font-size: larger; back
 	font-weight: normal;
 }
 
-ul{ margin-left: 20px; padding-left: 0; }
+ul{ margin-left: 10px; padding-left: 0; }
+ul ul { margin-left: 5px; }
 ul li{
 	list-style: none;
 	background:transparent url(../images/icons/bullet_black.png) no-repeat scroll left 5px;
 	padding:4px 0 4px 20px;
+}
+ul li li{
+	background-image: url(../images/icons/bullet_white.png);
+}
+ul li li li{
+	background-image: url(../images/icons/square_black.png);
 }
 ul.projects.root li.root{
 	background: none;
