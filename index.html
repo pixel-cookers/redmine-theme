@@ -104,9 +104,9 @@
             <h3>Special thanks</h3>
             <p>We used full or part of some icon sets or css projects.</p>
             <ul>
-      				<li><a href="http://pinvoke.com">Fugue</a> icon pack</li>
-      				<li><a href="http://wefunction.com/2008/07/function-free-icon-set">Function</a> Icon Set</li>
-      				<li><a href="http://code.google.com/p/sexybuttons/">Sexy Buttons</a></li>
+              <li><a href="http://pinvoke.com">Fugue</a> icon pack</li>
+              <li><a href="http://wefunction.com/2008/07/function-free-icon-set">Function</a> Icon Set</li>
+              <li><a href="http://code.google.com/p/sexybuttons/">Sexy Buttons</a></li>
             </ul>
           </div>
         </div>
@@ -158,31 +158,31 @@
           <h1>Installation</h1>
         </div>
         <div class="row">
-        	<div class="span16">
-    		    <h2>Basic method</h2>
-    		    <ol>
-    		    	 <li>Download the theme 
+          <div class="span16">
+            <h2>Basic method</h2>
+            <ol>
+               <li>Download the theme 
                 <p><a class="btn primary" href="https://github.com/pixel-cookers/RedmineThemePixelCookers/zipball/master">Download</a></p>
                </li>
-    		    	 <li>Unzip it into <code>../public/themes/</code>. This would result in a directory-path to application.css like:
-						   <p><pre>../public/themes/pixel-cookers/stylesheets/application.css</pre></p>
-					     </li>
-					     <li>You now may need to restart Redmine so that it shows the newly installed theme in the list of available themes.</li>
-					     <li>Go to "Administration -> Settings" -> "Display" and select your newly created theme in the "Theme" drop-down list. Save your settings.</li>
-					     <li>Redmine should now be displayed using the selected theme.</li>
-				    </ol>
-				    <br />
-				    <h2>Git method</h2>
-				    <ol>
-					     <li>Go to your Redmine root folder</li>
-					     <li>Launch the following command
-						    <p>
-						      <pre>git clone git://github.com/pixel-cookers/RedmineThemePixelCookers.git public/themes/</pre>
+               <li>Unzip it into <code>../public/themes/</code>. This would result in a directory-path to application.css like:
+               <p><pre>../public/themes/pixel-cookers/stylesheets/application.css</pre></p>
+               </li>
+               <li>You now may need to restart Redmine so that it shows the newly installed theme in the list of available themes.</li>
+               <li>Go to "Administration -> Settings" -> "Display" and select your newly created theme in the "Theme" drop-down list. Save your settings.</li>
+               <li>Redmine should now be displayed using the selected theme.</li>
+            </ol>
+            <br />
+            <h2>Git method</h2>
+            <ol>
+               <li>Go to your Redmine root folder</li>
+               <li>Launch the following command
+                <p>
+                  <pre>git clone git://github.com/pixel-cookers/RedmineThemePixelCookers.git public/themes/</pre>
                 </p>
-					     </li>
-					     <li>Follow the steps 3 to 5 from the basic verion</li>
-				    </ol>
-			    </div>
+               </li>
+               <li>Follow the steps 3 to 5 from the basic verion</li>
+            </ol>
+          </div>
         </div>
       </div>
     </section>
@@ -193,8 +193,8 @@
           <h1>Changelog</h1>
         </div>
         <div class="row">
-        	<div class="span16">
-          	<dl>
+          <div class="span16">
+            <dl>
               <dt>v1.3.1</dt>
               <dd>Wiki headers refactoring</dd>
               <dd>Wiki stle improved</dd>
@@ -207,13 +207,13 @@
               <dd>Add css transition on menu items</dd>
               <dd>Fields focus render modified</dd>
               <dd>Bug fixes</dd>
-          		<dt>v1.2 (Redmine 1.0.0 compatible) <span class="label warning">No more compatible with older versions</span></dt>
-      				<dd>Left menu reorganized</dd>
-      				<dd>Readability enhancement</dd>
-      				<dd>Icons modified to fit better with items</dd>
-      				<dd>No more bugs in left menu</dd>
-      				<dd>Lastest Redmine version compatibility</dd>
-      				<dd>Easy way to change color set (Commented example provided at the end of the stylesheet, thanks Brendan)</dd>
+              <dt>v1.2 (Redmine 1.0.0 compatible) <span class="label warning">No more compatible with older versions</span></dt>
+              <dd>Left menu reorganized</dd>
+              <dd>Readability enhancement</dd>
+              <dd>Icons modified to fit better with items</dd>
+              <dd>No more bugs in left menu</dd>
+              <dd>Lastest Redmine version compatibility</dd>
+              <dd>Easy way to change color set (Commented example provided at the end of the stylesheet, thanks Brendan)</dd>
               <dt>v1.1.1</dt>
               <dd>Empty external options menu on top removed</dd>
               <dd>Links area are bigger</dd>
@@ -222,8 +222,33 @@
               <dd>Links in the top menu are lighter</dd>
               <dt>v1.0</dt>
               <dd>Initial release</dd>
-  			    </dl>
-        	</div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="disqus">
+      <div class="container">
+        <div class="page-header">
+          <h1>Comments</h1>
+        </div>
+        <div class="row">
+          <div class="span16">
+            <div id="disqus_thread"></div>
+            <script type="text/javascript">
+              /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+              var disqus_shortname = 'pixelcookersghpages'; // required: replace example with your forum shortname
+
+              /* * * DON'T EDIT BELOW THIS LINE * * */
+              (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+              })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+          </div>
         </div>
       </div>
     </section>
