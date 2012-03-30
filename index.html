@@ -14,8 +14,8 @@
     <!-- Le styles -->
     <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet/less" href="lib/bootstrap.less">
-    <link rel="stylesheet/less" href="lib/style.less">
+    <link rel="stylesheet/less" href="less/bootstrap.less">
+    <link rel="stylesheet/less" href="less/style.less">
     <link rel="stylesheet" href="js/colorbox/colorbox.css">
 
     <script src="js/less.js"></script>
@@ -28,11 +28,11 @@
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
 
-  <body>
+  <body >
     <a href="https://github.com/pixel-cookers/RedmineThemePixelCookers"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub"></a>
 
-    <div class="topbar" style="display: none;" data-scrollspy="scrollspy">
-      <div class="fill">
+    <div class="navbar navbar-fixed-top" style="display: none;" data-scrollspy="scrollspy">
+      <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
             <li><a href="#presentation">Presentation</a></li>
@@ -82,13 +82,13 @@
         </div>
 
         <div class="row">
-          <div class="span-one-third">
+          <div class="span4">
             <h3>Why</h3>
             <p>Bored by the <a href="http://www.redmine.org/projects/redmine/wiki/ThemeDefault">default Redmine theme</a> and after using the <a href="http://www.redmine.org/projects/redmine/wiki/ThemeWatersky">Watersky theme</a> for a while, we decided to create our own. The first challenge was to create a nice theme better corresponding with our spirit, the second was to completely change the look and feel without touching one line of HTML. </p>
             <p>After this little presentation, you can't wait ? So download the theme now :</p>
-            <p><a class="btn primary" href="https://github.com/pixel-cookers/RedmineThemePixelCookers/zipball/master">Download</a></p>
+            <p><a class="btn btn-primary" href="https://github.com/pixel-cookers/RedmineThemePixelCookers/zipball/master">Download</a></p>
           </div>
-          <div class="span-one-third">
+          <div class="span4">
             <h3>Compatibility</h3>
             <p>This theme is compatible with the latest Redmine version 
             <span class="label">v1.3.x</span>. It is tested and supported in major modern browsers like Chrome, Safari, Internet Explorer, and Firefox.</p>
@@ -101,7 +101,7 @@
               <li>Opera 11</li>
             </ul>
           </div>
-          <div class="span-one-third">
+          <div class="span4">
             <h3>Special thanks</h3>
             <p>We used full or part of some icon sets or css projects.</p>
             <ul>
@@ -121,29 +121,29 @@
         </div>
         
         <div class="row">
-          <div class="span16">
-            <ul class="media-grid">
+          <div class="span12">
+            <ul class="thumbnails">
               <li>
-                <a href="images/0008.jpg">
-                  <img class="thumbnail" src="images/th0008.png" alt="">
+                <a class="thumbnail" href="images/0008.jpg">
+                  <img src="images/th0008.png" alt="">
                   <span class="magnifier"></span>
                 </a>
               </li>
               <li>
-                <a href="images/0009.jpg">
-                  <img class="thumbnail" src="images/th0009.png" alt="">
+                <a class="thumbnail" href="images/0009.jpg">
+                  <img src="images/th0009.png" alt="">
                   <span class="magnifier"></span>
                 </a>
               </li>
               <li>
-                <a href="images/0010.jpg">
-                  <img class="thumbnail" src="images/th0010.png" alt="">
+                <a class="thumbnail" href="images/0010.jpg">
+                  <img src="images/th0010.png" alt="">
                   <span class="magnifier"></span>
                 </a>
               </li>
               <li>
-                <a href="images/0012.jpg">
-                  <img class="thumbnail" src="images/th0012.png" alt="">
+                <a class="thumbnail" href="images/0012.jpg">
+                  <img src="images/th0012.png" alt="">
                   <span class="magnifier"></span>
                 </a>
               </li>
@@ -163,7 +163,7 @@
             <h2>Basic method</h2>
             <ol>
                <li>Download the theme 
-                <p><a class="btn primary" href="https://github.com/pixel-cookers/RedmineThemePixelCookers/zipball/master">Download</a></p>
+                <p><a class="btn btn-primary" href="https://github.com/pixel-cookers/RedmineThemePixelCookers/zipball/master">Download</a></p>
                </li>
                <li>Unzip it into <code>../public/themes/</code>. This would result in a directory-path to application.css like:
                <p><pre>../public/themes/pixel-cookers/stylesheets/application.css</pre></p>
@@ -208,7 +208,7 @@
               <dd>Add css transition on menu items</dd>
               <dd>Fields focus render modified</dd>
               <dd>Bug fixes</dd>
-              <dt>v1.2 (Redmine 1.0.0 compatible) <span class="label warning">No more compatible with older versions</span></dt>
+              <dt>v1.2 (Redmine 1.0.0 compatible) <span class="label label-warning">No more compatible with older versions</span></dt>
               <dd>Left menu reorganized</dd>
               <dd>Readability enhancement</dd>
               <dd>Icons modified to fit better with items</dd>
@@ -278,6 +278,7 @@
 
     <div class="container">
       <footer>
+      	<div class="page-header"></div>
       	<div class="pull-right">
       		<a href="https://twitter.com/share" class="twitter-share-button" data-via="pixelcookers" data-related="moalmeyer" data-hashtags="pixelcookers">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       		<iframe src="http://markdotto.github.com/github-buttons/github-btn.html?user=pixel-cookers&repo=RedmineThemePixelCookers&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="110px" height="20px"></iframe>

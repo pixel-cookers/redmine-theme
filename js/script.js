@@ -3,11 +3,9 @@ $(document).ready(function(){
 
 	$(window).scroll(function() {
 		if($(this).scrollTop() > 0){
-			$('.topbar').fadeIn('slow');
+			$('.navbar').fadeIn('slow');
 		} else {
-			$('.topbar').fadeOut('slow');
+			$('.navbar').fadeOut('slow');
 		}
 	});
-
-
 });
