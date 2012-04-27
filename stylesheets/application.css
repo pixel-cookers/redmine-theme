@@ -151,14 +151,11 @@ a.issue.closed, a.issue.closed:link, a.issue.closed:visited{
 #footer { 
 	background-color:#EEEEEE; 
 	border-top: 1px solid #CCCCCC; 
-	bottom: -20px;
 	clear: left; 
 	color:#666666; 
 	font-size:9px; 
-	left: 255px;
-	margin-right: 295px;
+	margin: 40px 30px 0 255px;
 	padding: 15px 0; 
-	position: relative;
 	text-align:left; 
 }
 #footer a, #footer a:link, #footer a:visited { 
