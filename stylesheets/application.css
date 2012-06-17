@@ -675,7 +675,7 @@ div.wiki ul.toc li {
   padding: inherit;
 }
 .contextual input[type='submit'] {
-  margin: 0 
+  margin: 0
 		padding: 1px 7px !important;
 }
 #history .contextual,
@@ -1054,7 +1054,7 @@ fieldset#date-range {
 .box {
   background-color: #F5FCFC;
 }
-/* == Colors change example == 
+/* == Colors change example ==
 
 a, a:link, a:visited { color: #cc0000 }
 #footer a, #footer a:link, #footer a:visited  { color: #cc0000 }
