@@ -250,6 +250,13 @@ h4 {
   font-size: 16px;
 }
 /* Links */
+#sidebar a.selected {
+  background-color: transparent;
+  color: inherit;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
 /* Menu */
 #main-menu {
   font-family: Helvetica, Arial, sans-serif;
@@ -932,9 +939,11 @@ h3.version {
 #admin-menu li {
   padding-bottom: 14px;
 }
-#admin-menu li a {
-  padding-left: 26px;
-  padding-top: 3px;
+#admin-menu li a,
+#admin-menu li a.selected {
+  padding-bottom: 3px !important;
+  padding-left: 26px !important;
+  padding-top: 3px !important;
 }
 #admin-menu a.projects {
   background-image: url(../images/22x22/projects.png);
@@ -1040,7 +1049,8 @@ dt.project {
 /* Links */
 a,
 a:link,
-a:visited {
+a:visited,
+#sidebar a.selected {
   color: #0071bc;
 }
 #footer a,
