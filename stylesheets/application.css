@@ -227,8 +227,8 @@ h4,
 }
 #content .wiki h2 {
   background: #edf3fe;
-  border-top: 1px solid #e3ecfc;
   border-bottom: 1px solid #d2e1fc;
+  border-top: 1px solid #e3ecfc;
   color: #000000;
   font-size: 16px;
   margin: -6px -10px 10px;
@@ -469,11 +469,11 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-  padding: 2px;
   border: 1px solid #d7d7d7;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
   border-radius: 2px;
+  padding: 2px;
 }
 input[type="text"],
 input[type="password"],
@@ -511,14 +511,14 @@ textarea.wiki-edit {
   padding-left: 0;
 }
 #content .splitcontentright .projects.box > ul > li {
-  padding-left: 0;
   background: none;
+  padding-left: 0;
 }
 #content .splitcontentright .projects.box > ul > li:first-line,
 #content .splitcontentleft .news.box p > a + a,
 #content .splitcontentright .news.box p > a {
-  font-weight: bold;
   font-size: 13px;
+  font-weight: bold;
 }
 #content .splitcontentright .news.box p > a[href^="/projects/"] {
   font-size: 12px;
@@ -573,11 +573,11 @@ ul.projects li.child {
   padding-top: 5px;
 }
 input[type='submit'] {
-  cursor: pointer;
   background: url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
   background-color: #015ea9;
   border: none;
   color: #fff !important;
+  cursor: pointer;
   display: inline-block;
   padding: 5px 10px 5px !important;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
