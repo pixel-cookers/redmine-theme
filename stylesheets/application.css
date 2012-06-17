@@ -506,6 +506,9 @@ textarea.wiki-edit {
 .box {
   background-color: #F5FCFC;
 }
+#add-news {
+  margin-bottom: 15px;
+}
 #content .splitcontentright .projects.box > ul {
   margin-left: 0;
   padding-left: 0;
