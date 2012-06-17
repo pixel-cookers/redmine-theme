@@ -74,13 +74,14 @@ a.issue.closed:visited {
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
-  font-size: 11px;
 }
 #header select {
+  font-size: 13px;
   max-width: 205px;
   padding: 0;
 }
 #header input[type="text"] {
+  font-size: 11px;
   padding: 2px 2px;
   width: 120px;
 }
@@ -137,7 +138,7 @@ a.issue.closed:visited {
   margin: 0 30px 0 260px;
   padding: 40px 0 0 0;
 }
-#main .nosidebar #content {
+#main.nosidebar #content {
   border: 1px solid #CCCCCC;
 }
 #content {
@@ -186,8 +187,8 @@ a.issue.closed:visited {
   margin: -5px -10px 10px;
   padding: 10px 15px;
 }
-#content h2:first-child,
-#content .wiki h1:first-child {
+#content h2:first-of-type,
+#content .wiki h1:first-of-type {
   border-radius: 6px 6px 0 0;
   -moz-border-radius-bottomleft: 0;
   -webkit-border-bottom-left-radius: 0px;
@@ -203,7 +204,6 @@ h2,
 h3,
 h4 {
   color: #222222;
-  font-family: "Lucida Grande", arial, sans-serif;
 }
 h1 {
   font-size: 24px;
@@ -532,15 +532,15 @@ ul ul {
   margin-left: 5px;
 }
 ul li {
-  background: transparent url(../images/icons/bullet_black.png) no-repeat scroll left 5px;
+  background: transparent url(../images/bullet_black.png) no-repeat scroll left 5px;
   list-style: none;
   padding: 4px 0 4px 20px;
 }
 ul li li {
-  background-image: url(../images/icons/bullet_white.png);
+  background-image: url(../images/bullet_white.png);
 }
 ul li li li {
-  background-image: url(../images/icons/square_black.png);
+  background-image: url(../images/square_black.png);
 }
 ul.projects.root li.root {
   background: none;
