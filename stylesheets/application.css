@@ -208,8 +208,8 @@ h4 {
 h1 {
   font-size: 24px;
   font-weight: normal;
-  margin: 0pt 0pt 0pt 0.25em;
-  padding: 0pt 0pt 10px;
+  margin: 0 0 0 0.25em;
+  padding: 0 0 10px;
   text-align: left;
 }
 h2,
@@ -218,7 +218,7 @@ h4,
 .wiki h1,
 .wiki h2,
 .wiki h3 {
-  border-bottom: 0px;
+  border-bottom: 0;
 }
 .wiki h2,
 .wiki h3 {
@@ -329,7 +329,7 @@ table.list thead th {
   border-bottom: 1px solid #999999;
   font-size: 9px;
   font-weight: normal;
-  padding: 0pt 3px 3px;
+  padding: 0 3px 3px;
   text-transform: uppercase;
 }
 table.list thead th a {
@@ -485,9 +485,9 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
   border: 1px solid #ccc;
-  box-shadow: 0px 0px 5px rgba(1, 94, 169, 0.6);
-  -moz-box-shadow: 0px 0px 5px rgba(1, 94, 169, 0.6);
-  -webkit-box-shadow: 0px 0px 5px rgba(1, 94, 169, 0.6);
+  box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
+  -moz-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
+  -webkit-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
   outline: none;
 }
 option {
@@ -634,8 +634,8 @@ div.wiki ul.toc li {
   -moz-border-radius-bottomright: 0;
   -moz-border-radius-topleft: 5px;
   -moz-border-radius-topright: 5px;
-  -webkit-border-bottom-left-radius: 0px;
-  -webkit-border-bottom-right-radius: 0px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
   -o-border-radius: 5px 5px 0 0;
@@ -685,7 +685,7 @@ div.wiki ul.toc li {
   padding: 0;
 }
 hr {
-  background: #eee none repeat scroll 0% 0%;
+  background: #eee none repeat scroll 0 0;
 }
 /* Flashbox */
 #errorExplanation,
