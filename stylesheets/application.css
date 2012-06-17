@@ -922,6 +922,10 @@ span.add_attachment a {
 table.members td.group {
   background-image: url(../images/icons/users.png);
 }
+input#principal_search,
+input#user_search {
+  background-image: url(../images/icons/magnifier-medium-left.png);
+}
 div.projects h3 {
   background: none;
   padding-left: 0;
