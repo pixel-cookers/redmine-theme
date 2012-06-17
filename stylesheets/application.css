@@ -876,6 +876,9 @@ tr.message.sticky td.subject {
 .icon-package {
   background-image: url(../images/icons/box-label.png);
 }
+.icon-passwd {
+  background-image: url(../images/icons/key--pencil.png);
+}
 .icon-projects {
   background-image: url(../images/icons/block.png);
 }
