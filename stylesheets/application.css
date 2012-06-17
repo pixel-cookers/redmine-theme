@@ -929,7 +929,7 @@ h3.version {
 #admin-menu a.groups {
   background-image: url(../images/22x22/users.png);
 }
-#admin-menu a[href="/ldap_auth_sources"] {
+#admin-menu a.ldap-authentication {
   background-image: url(../images/22x22/authent.png);
 }
 #admin-menu a.roles {
