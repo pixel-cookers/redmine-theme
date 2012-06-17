@@ -918,6 +918,48 @@ tr.message.sticky td.subject {
 .jstElements .help a {
   background-image: url(../images/icons/question.png) !important;
 }
+.jstElements button.jstb_strong {
+  background-image: url(../images/icons/edit-bold.png);
+}
+.jstElements button.jstb_em {
+  background-image: url(../images/icons/edit-italic.png);
+}
+.jstElements button.jstb_ins {
+  background-image: url(../images/icons/edit-underline.png);
+}
+.jstElements button.jstb_del {
+  background-image: url(../images/icons/edit-strike.png);
+}
+.jstElements button.jstb_code {
+  background-image: url(../images/icons/edit-code.png);
+}
+.jstElements button.jstb_h1 {
+  background-image: url(../images/icons/edit-heading-1.png);
+}
+.jstElements button.jstb_h2 {
+  background-image: url(../images/icons/edit-heading-2.png);
+}
+.jstElements button.jstb_h3 {
+  background-image: url(../images/icons/edit-heading-3.png);
+}
+.jstElements button.jstb_ul {
+  background-image: url(../images/icons/edit-list.png);
+}
+.jstElements button.jstb_ol {
+  background-image: url(../images/icons/edit-list-order.png);
+}
+.jstElements button.jstb_bq {
+  background-image: url(../images/icons/edit-indent.png);
+}
+.jstElements button.jstb_unbq {
+  background-image: url(../images/icons/edit-outdent.png);
+}
+.jstElements button.jstb_link {
+  background-image: url(../images/icons/picture.png);
+}
+.jstElements button.jstb_img {
+  background-image: url(../images/icons/chain.png);
+}
 span.search_for_watchers a,
 span.add_attachment a {
   background-image: url(../images/icons/plus-small-circle.png);

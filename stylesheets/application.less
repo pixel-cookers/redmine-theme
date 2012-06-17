@@ -818,8 +818,27 @@ tr.message.sticky td.subject {
 .icon-zoom-in { background-image: url(../images/icons/magnifier-zoom-in.png); }
 .icon-zoom-out { background-image: url(../images/icons/magnifier-zoom-out.png); }
 
-.jstElements .help a {
-	background-image: url(../images/icons/question.png) !important;
+.jstElements {
+	.help a {
+		background-image: url(../images/icons/question.png) !important;
+	}
+	button {
+		&.jstb_strong{ background-image: url(../images/icons/edit-bold.png); }	
+		&.jstb_em{ background-image: url(../images/icons/edit-italic.png); }	
+		&.jstb_ins{ background-image: url(../images/icons/edit-underline.png); }	
+		&.jstb_del{ background-image: url(../images/icons/edit-strike.png); }	
+		&.jstb_code{ background-image: url(../images/icons/edit-code.png); }	
+		&.jstb_h1{ background-image: url(../images/icons/edit-heading-1.png); }	
+		&.jstb_h2{ background-image: url(../images/icons/edit-heading-2.png); }	
+		&.jstb_h3{ background-image: url(../images/icons/edit-heading-3.png); }	
+		&.jstb_ul{ background-image: url(../images/icons/edit-list.png); }	
+		&.jstb_ol{ background-image: url(../images/icons/edit-list-order.png); }	
+		&.jstb_bq{ background-image: url(../images/icons/edit-indent.png); }	
+		&.jstb_unbq{ background-image: url(../images/icons/edit-outdent.png); }	
+		//&.jstb_pre{ background-image: url(../images/icons/edit-code-division.png); }	
+		&.jstb_link{ background-image: url(../images/icons/picture.png); }	
+		&.jstb_img{ background-image: url(../images/icons/chain.png); }	
+	}
 }
 
 span.search_for_watchers a, span.add_attachment a {
