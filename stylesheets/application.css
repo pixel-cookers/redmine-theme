@@ -184,7 +184,6 @@ a.issue.closed:visited {
   border-bottom: 1px solid #CCCCCC;
   color: #000;
   font-size: 17px;
-  margin: -5px -10px 10px;
   padding: 10px 15px;
 }
 #content h2:first-of-type,
@@ -198,6 +197,7 @@ a.issue.closed:visited {
   -webkit-border-top-left-radius: 6px;
   -moz-border-radius-topright: 6px;
   -webkit-border-top-right-radius: 6px;
+  margin: -5px -10px 10px;
 }
 h1,
 h2,
@@ -799,8 +799,20 @@ tr.message.sticky td.subject {
 .icon-add {
   background-image: url(../images/icons/plus-circle.png);
 }
-.icon-edit {
-  background-image: url(../images/icons/pencil.png);
+.icon-admin {
+  background-image: url(../images/icons/hammer-screwdriver.png);
+}
+.icon-attachment {
+  background-image: url(../images/icons/paper-clip.png);
+}
+.icon-cancel {
+  background-image: url(../images/icons/arrow-curve-180-left.png);
+}
+.icon-checked {
+  background-image: url(../images/icons/tick.png);
+}
+.icon-comment {
+  background-image: url(../images/icons/balloon-left.png);
 }
 .icon-copy {
   background-image: url(../images/icons/documents-text.png);
@@ -808,14 +820,17 @@ tr.message.sticky td.subject {
 .icon-del {
   background-image: url(../images/icons/eraser.png);
 }
-.icon-move {
-  background-image: url(../images/icons/arrow-curve.png);
+.icon-details {
+  background-image: url(../images/icons/magnifier-zoom-in.png);
 }
-.icon-save {
-  background-image: url(../images/icons/disk-black.png);
+.icon-edit {
+  background-image: url(../images/icons/pencil.png);
 }
-.icon-cancel {
-  background-image: url(../images/icons/arrow-curve-180-left.png);
+.icon-fav {
+  background-image: url(../images/icons/star.png);
+}
+.icon-fav-off {
+  background-image: url(../images/icons/star-empty.png);
 }
 .icon-file {
   background-image: url(../images/icons/report-paper.png);
@@ -826,71 +841,66 @@ tr.message.sticky td.subject {
 .open .icon-folder {
   background-image: url(../images/icons/foler-horizontal-open.png);
 }
-.icon-package {
-  background-image: url(../images/icons/box-label.png);
-}
-.icon-home {
-  background-image: url(../images/icons/home.png);
-}
-.icon-user {
-  background-image: url(../images/icons/user-black.png);
-}
-.icon-mypage {
-  background-image: url(../images/icons/dashboard.png);
-}
-.icon-admin {
-  background-image: url(../images/icons/hammer-screwdriver.png);
-}
-.icon-projects {
-  background-image: url(../images/icons/block.png);
-}
 .icon-help {
   background-image: url(../images/icons/information.png);
-}
-.icon-attachment {
-  background-image: url(../images/icons/paper-clip.png);
 }
 .icon-index {
   background-image: url(../images/icons/document-list.png);
 }
-.icon-time {
-  background-image: url(../images/icons/clock.png);
+.icon-lock {
+  background-image: url(../images/icons/lock.png);
 }
-.icon-stats {
-  background-image: url(../images/icons/chart.png);
+.icon-home {
+  background-image: url(../images/icons/home.png);
 }
-.icon-warning {
-  background-image: url(../images/icons/exclamation.png);
+.icon-move {
+  background-image: url(../images/icons/arrow-curve.png);
 }
-.icon-fav {
-  background-image: url(../images/icons/star.png);
+.icon-mypage {
+  background-image: url(../images/icons/dashboard.png);
 }
-.icon-fav-off {
-  background-image: url(../images/icons/star-empty.png);
+.icon-package {
+  background-image: url(../images/icons/box-label.png);
+}
+.icon-projects {
+  background-image: url(../images/icons/block.png);
+}
+.icon-save {
+  background-image: url(../images/icons/disk-black.png);
 }
 .icon-reload {
   background-image: url(../images/icons/arrow-circle-double-135.png);
 }
-.icon-lock {
-  background-image: url(../images/icons/lock.png);
+.icon-report {
+  background-image: url(../images/icons/report.png);
+}
+.icon-stats {
+  background-image: url(../images/icons/chart.png);
+}
+.icon-time {
+  background-image: url(../images/icons/clock.png);
 }
 .icon-unlock {
   background-image: url(../images/icons/lock-unlock.png);
 }
-.icon-checked {
-  background-image: url(../images/icons/tick.png);
+.icon-user {
+  background-image: url(../images/icons/user-black.png);
 }
-.icon-details {
-  background-image: url(../images/icons/magnifier-zoom.png);
+.icon-warning {
+  background-image: url(../images/icons/exclamation.png);
 }
-.icon-report {
-  background-image: url(../images/icons/report.png);
+.icon-zoom-in {
+  background-image: url(../images/icons/magnifier-zoom-in.png);
 }
-.icon-comment {
-  background-image: url(../images/icons/balloon-left.png);
+.icon-zoom-out {
+  background-image: url(../images/icons/magnifier-zoom-out.png);
 }
 .jstElements .help a {
   background-image: url(../images/icons/question.png) !important;
+}
+span.search_for_watchers a,
+span.add_attachment a {
+  background-image: url(../images/icons/plus-small-circle.png);
 }
 div.projects h3 {
   background: none;
