@@ -610,11 +610,14 @@ div.wiki {
 	padding: 0;
 
 	> * {
-		margin-left: -15px;
-		margin-right: 15px;
+		margin-left: 5px;
+		padding-right: 5px;
 
 		&:first-child {
-			margin-left: 15px;
+			margin-left: 10px;
+		}
+		&:last-child {
+			padding-right: 10px;
 		}
 	}
 
@@ -629,10 +632,10 @@ div.wiki {
 	border: none;
 }
 
-#content .breadcrumb + .contextual {
-	 margin-top: 6px;
+h2 img.gravatar {
+	vertical-align: top;
+	width: 21px;
 }
-
 
 .contextual {
 	input[type='text'] {
@@ -861,7 +864,6 @@ h3.version {
 		&.projects { background-image:url(../images/22x22/projects.png); }
 		&.users { background-image:url(../images/22x22/user.png); }
 		&.groups{ background-image:url(../images/22x22/users.png); }
-		&.ldap-authentication { background-image:url(../images/22x22/authent.png); }
 		&.roles { background-image:url(../images/22x22/roles.png); }
 		&.trackers { background-image:url(../images/22x22/tracker.png); }
 		&.issue_statuses { background-image:url(../images/22x22/issue_statuses.png); }
@@ -869,6 +871,7 @@ h3.version {
 		&.custom_fields { background-image:url(../images/22x22/custom_fields.png); }
 		&.enumerations { background-image:url(../images/22x22/enumerations.png); }
 		&.settings { background-image:url(../images/22x22/settings.png); }
+		&.ldap-authentication { background-image:url(../images/22x22/authent.png); }
 		&.plugins { background-image:url(../images/22x22/plugin.png); }
 		&.info { background-image:url(../images/22x22/info.png); }
 	}
