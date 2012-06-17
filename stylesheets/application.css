@@ -185,6 +185,9 @@ a.issue.closed:visited {
   color: #000;
   font-size: 17px;
   padding: 10px 15px;
+  margin-bottom: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 #content h2:first-of-type,
 #content .wiki h1:first-of-type {
@@ -197,7 +200,7 @@ a.issue.closed:visited {
   -webkit-border-top-left-radius: 6px;
   -moz-border-radius-topright: 6px;
   -webkit-border-top-right-radius: 6px;
-  margin: -5px -10px 10px;
+  margin-top: -5px;
 }
 h1,
 h2,
@@ -1039,6 +1042,10 @@ dt.document {
 }
 dt.project {
   background-image: url(../images/icons/block.png);
+}
+/* Redmine Code Review Plugin */
+#code-review-assign-link {
+  margin-bottom: 10px;
 }
 /*---------- Only Pixel Cookers Theme ----------*/
 #sidebar_btn {
