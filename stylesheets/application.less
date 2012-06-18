@@ -195,7 +195,7 @@ a {
 /* Headers */
 #content {
 	h2, .wiki h1 {
-		background: #DDDDDD url("../images/awesome-overlay-sprite.png") repeat-x scroll 0 -50px;
+		#gradient > .vertical(#ececec, #dedede);
 		border-bottom: 1px solid #CCCCCC;
 		color: #000;
 		font-size: 17px;
@@ -283,7 +283,6 @@ h3, h4 {
 				.border-radius(5px 0 0 5px);
 				.box-shadow(-2px 1px 2px rgba(0,0,0,0.5));
 				.user-select(none);
-				background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
 				border: none;
 				color: #fff;
 				cursor: pointer;
@@ -295,8 +294,13 @@ h3, h4 {
 
 				&:hover {
 					.transition(padding-right 200ms linear);
-					background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
 					padding-right: 25px;
+				}
+				&:active {
+					.box-shadow(inset 2px 1px 2px rgba(0,0,0,0.5));
+					/* IE only stuff */
+					border-bottom: 0\9;
+					border-top: 1px solid #666\9;
 				}
 				&.selected, &.selected:hover {
 					background: #f3f3f3;
@@ -350,7 +354,7 @@ table.list {
 }
 
 table.progress tr td.closed{
-	background-image: url("../images/progress.png");
+	.progress-success.progress-striped .bar;
 }
 
 /* Issues grid styles by priorities (provided by Wynn Netherland) */
@@ -505,8 +509,6 @@ input[type='submit'] {
 	.border-radius(5px);
 	.box-shadow(0 1px 2px rgba(0,0,0,0.5));
 	.user-select(none);
-	background: url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
-	background-color: #015ea9;
 	border: none;
 	color: #fff !important;
 	cursor: pointer;
@@ -515,7 +517,6 @@ input[type='submit'] {
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
 
 	&:hover {
-		background-position: 0 -50px;
 		color: #fff !important;
 	}
 
@@ -920,9 +921,9 @@ a, a:link, a:visited, #sidebar a.selected { color: #0071BC }
 #top-menu { background-color: #0071BC }
 
 /* Buttons */
-#main-menu li a { background-color: #015EA9 }
-#main-menu li a:hover { background-color: #015EA9 }
-input[type="submit"] { background-color: #015EA9 }
+#main-menu ul li a { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
+#main-menu ul li a:hover { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
+input[type="submit"] { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
 
 /* Boxes */
 fieldset#filters, fieldset#date-range { background-color: #F5FCFC }
@@ -936,9 +937,9 @@ a, a:link, a:visited { color: #cc0000 }
 
 #top-menu { background-color: #cc0000}
 
-#main-menu li a { background-color: #cc0000 }
-#main-menu li a:hover { background-color: #cc0000 }
-input[type="submit"] { background-color: #cc0000 }
+#main-menu ul li a { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
+#main-menu ul li a:hover { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
+input[type="submit"] { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
 
 fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
 .box { background-color:#FCF5FC; }
