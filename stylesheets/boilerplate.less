@@ -228,7 +228,7 @@
   filter: ~"alpha(opacity=@{opacity})";
 }
 
-/ Add an alphatransparency value to any background or border color (via Elyse Holladay)
+// Add an alphatransparency value to any background or border color (via Elyse Holladay)
 #translucent {
   .background(@color: @white, @alpha: 1) {
     background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
@@ -333,4 +333,25 @@
   &.active {
     background-color: darken(@endColor, 10%) e("\9");
   }
+}
+
+// Fonts
+
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.calibri {
+  font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+.helvetica {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.lucida {
+  font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+.trebuchet {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+.verdana {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
 }

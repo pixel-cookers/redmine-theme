@@ -8,9 +8,9 @@
 @import url(boilerplate.less);
 
 body {
+	.lucida;
 	background: #F3F3F3 url(../images/bg-body.png) repeat-y scroll left top;
 	color: #555555;
-	font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
 }
 #wrapper {
 	background: transparent;
@@ -44,8 +44,8 @@ a {
 	width: 221px;
 
 	h1 {
+		.calibri;
 		color: #CCCCCC;
-		font-family: Calibri,Helvetica,Arial,sans-serif;
 		font-weight: bold;
 		margin: 0 0 0 15px;
 		position: relative;
@@ -56,7 +56,7 @@ a {
 	}
 
 	#quick-search {
-		font-family: Arial,Helvetica,sans-serif;
+		.arial;
 		line-height: 30px;
 		margin: 0;
 		padding:0 15px 20px;
@@ -73,7 +73,7 @@ a {
 		}
 	}
 	input[type="text"], select {
-		border-radius: 0; -moz-border-radius: 0; -webkit-border-radius: 0;
+		.border-radius(0);
 	}
 	select {
 		font-size: 13px;
@@ -116,8 +116,8 @@ a {
 	}
 
 	#loggedas {
+		.arial;
 		color: #888;
-		font-family: Arial,Helvetica,sans-serif;
 		height: 30px;
 		line-height: 1.5em;
 		margin: 0;
@@ -153,9 +153,9 @@ a {
 }
 
 #content {
+	.border-radius(6px);
 	background: #FFFFFF none repeat scroll 0 0;
 	border: 1px solid #CCCCCC;
-	border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px;
 	margin: 0 0 20px;
 	width: 81%;
 }
@@ -205,11 +205,7 @@ a {
 		margin-right: -10px;
 		
 		&:first-of-type {
-			border-radius: 6px 6px 0 0;
-			-moz-border-radius-bottomleft: 0; -webkit-border-bottom-left-radius: 0px;
-			-moz-border-radius-bottomright: 0; -webkit-border-bottom-right-radius: 0px;
-			-moz-border-radius-topleft: 6px; -webkit-border-top-left-radius: 6px;
-			-moz-border-radius-topright: 6px; -webkit-border-top-right-radius: 6px;
+			.border-radius(6px 6px 0 0);
 			margin-top: -5px;
 		}
 	}
@@ -229,7 +225,7 @@ h2, h3, h4, .wiki h1, .wiki h2, .wiki h3 {
 }
 
 .wiki h2, .wiki h3 {
-	font-family: "Trebuchet MS",Verdana,sans-serif;
+	.trebuchet;
 	font-weight: bold;
 }
 #content .wiki h2 {
@@ -268,7 +264,7 @@ h3, h4 {
 
 /* Menu */
 #main-menu {
-	font-family: Helvetica,Arial,sans-serif;
+	.helvetica;
 	margin: 70px 0 0 9px;
 	padding: 0;
 	position: relative;
@@ -284,13 +280,11 @@ h3, h4 {
 			text-align: right;
 
 			a {
+				.border-radius(5px 0 0 5px);
+				.box-shadow(-2px 1px 2px rgba(0,0,0,0.5));
+				.user-select(none);
 				background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
 				border: none;
-				border-radius: 5px 0 0 5px;
-				-moz-border-radius-topleft: 5px; -webkit-border-top-left-radius: 5px;
-				-moz-border-radius-bottomleft: 5px; -webkit-border-bottom-left-radius: 5px;
-				-moz-box-shadow: -2px 1px 2px rgba(0,0,0,0.5); -webkit-box-shadow: -2px 1px 2px rgba(0,0,0,0.5);
-				-o-box-shadow: -2px 1px 2px rgba(0,0,0,0.5); box-shadow: -2px 1px 2px rgba(0,0,0,0.5);
 				color: #fff;
 				cursor: pointer;
 				display: block;
@@ -298,15 +292,11 @@ h3, h4 {
 				font-weight: normal;
 				padding: 10px 15px;
 				text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
-				user-select: none; -moz-user-select: none;
 
 				&:hover {
+					.transition(padding-right 200ms linear);
 					background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
 					padding-right: 25px;
-					-webkit-transition: padding-right 200ms linear;
-					-moz-transition: padding-right 200ms linear;
-					-o-transition: padding-right 200ms linear;
-					transition: padding-right 200ms linear;
 				}
 				&.selected, &.selected:hover {
 					background: #f3f3f3;
@@ -333,10 +323,7 @@ table.list {
 			padding: 7px 10px 7px 3px;
 		}
 		tr:hover, tr.group:hover {
-			-webkit-transition: background-color 150ms linear;
-			-moz-transition: background-color 150ms linear;
-			-o-transition: background-color 150ms linear;
-			transition: background-color 150ms linear;
+			.transition(background-color 150ms linear);
 		}
 	}
 
@@ -412,16 +399,16 @@ td.username img.gravatar {
 
 /* Fields */
 input[type="text"], input[type="password"], textarea, select {
+	.border-radius(2px);
 	border: 1px solid #d7d7d7;
-	-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;
 	padding: 2px;
 }
 input[type="text"], input[type="password"], select {
 	padding: 4px;
 }
 input[type="text"]:focus, input[type="password"]:focus, textarea:focus, select:focus {
+	.box-shadow(0 0 5px rgba(1, 94, 169, 0.6));
 	border: 1px solid #ccc;
-	box-shadow: 0 0 5px rgba(1, 94, 169, 0.6); -moz-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6); -webkit-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
 	outline: none;
 }
 option {
@@ -430,7 +417,7 @@ option {
 input#issue_subject { font-size: 200%; width: 90%; }
 
 textarea.wiki-edit { 
-	font-family: Arial, Verdana, Serif; 
+	.arial; 
 	font-size: larger; 
 	background: #FFFFFF;
 }
@@ -503,17 +490,6 @@ ul{
 .tabs ul {
 	li {
 		padding: 0;
-
-		a {
-			-moz-border-radius-topleft: 3px;
-			-moz-border-radius-topright: 3px;
-			-webkit-border-top-left-radius: 3px;
-			-webkit-border-top-right-radius: 3px;
-			-o-border-top-left-radius: 3px;
-			-o-border-top-right-radius: 3px;
-			border-top-left-radius: 3px;
-			border-top-right-radius: 3px;
-		}
 	}
 }
 #context-menu li {
@@ -526,6 +502,9 @@ ul{
 }
 
 input[type='submit'] {
+	.border-radius(5px);
+	.box-shadow(0 1px 2px rgba(0,0,0,0.5));
+	.user-select(none);
 	background: url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
 	background-color: #015ea9;
 	border: none;
@@ -533,18 +512,7 @@ input[type='submit'] {
 	cursor: pointer;
 	display: inline-block;
 	padding: 5px 10px 5px !important;
-	text-shadow: 1px 1px 2px rgba(0,0,0,0.20);
-	user-select: none;
-	-moz-user-select: none;
 	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-o-border-radius: 5px;
-	border-radius: 5px;
-	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-	-o-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
-	box-shadow: 0 1px 2px rgba(0,0,0,0.5);
 
 	&:hover {
 		background-position: 0 -50px;
@@ -552,13 +520,8 @@ input[type='submit'] {
 	}
 
 	&:active {
+		.box-shadow(inset 0 1px 2px rgba(0,0,0,0.7));
 		background-position: 0 -100px;
-		-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7);
-		/* Unfortunately, Safari doesn't support inset yet */
-		-webkit-box-shadow: none;
-		-o-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7);
-		box-shadow: inset 0 1px 2px rgba(0,0,0,0.7);
-
 		/* IE only stuff */
 		border-bottom: 0\9;
 		border-top: 1px solid #666\9;
@@ -590,23 +553,12 @@ div.wiki {
 }
 
 #content > .contextual {
-	font-size: 0.9em;
-	font-family: verdana;
-	-moz-border-radius-bottomleft: 0;
-	-moz-border-radius-bottomright: 0;
-	-moz-border-radius-topleft: 5px;
-	-moz-border-radius-topright: 5px;
-	-webkit-border-bottom-left-radius: 0;
-	-webkit-border-bottom-right-radius: 0;
-	-webkit-border-top-left-radius: 5px;
-	-webkit-border-top-right-radius: 5px;
-	-o-border-radius: 5px 5px 0 0;
-	border-radius: 5px 5px 0 0;
+	.border-radius(5px 5px 0 0);
+	.verdana;
 	background: #FFFFFF;
 	border: 1px solid #CCCCCC;
 	border-bottom: none;
 	float: right;
-	font-family: verdana;
 	font-size: 0.9em;
 	margin: 3px 0 0 0;
 	position: relative;
@@ -665,15 +617,12 @@ hr {
 /* Flashbox */
 
 #errorExplanation, div.flash, .nodata, .warning {
+	.border-radius(6px);
 	background-position: 10px center !important;
 	background-repeat: no-repeat !important;
 	border: 1px solid;
 	font-size: 13px;
 	margin: 0 0 15px;
-	-moz-border-radius: 6px;
-	-webkit-border-radius: 6px;
-	-o-border-radius: 6px;
-	border-radius: 6px;
 	text-align: left;
 	padding: 10px 1px 10px 40px;
 }
@@ -765,8 +714,8 @@ tr.message.sticky td.subject {
 
 /* Login */
 #login-form {
+	.border-radius(6px);
 	background: #181619 url(../images/pc-bg-big.png) top left repeat-x;
-	border-radius: 6px; -moz-border-radius: 6px; -webkit-border-radius: 6px; -o-border-radius: 6px;
 	color: #cccccc;
 	height: 100%;
 	margin: -7px -10px -10px;

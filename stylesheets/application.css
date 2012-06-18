@@ -4,10 +4,54 @@
  * author: Ludovic Meyer, Pixel Cookers - http://www.pixel-cookers.com
  * v1.3
  */
+/**
+ * Pixel Cookers boilerplate
+ * author: Ludovic Meyer, Pixel Cookers - http://www.pixel-cookers.com
+ * Thanks to :
+ 	Twitter Bootstrap : http://twitter.github.com/bootstrap/
+ 	Less Boilerplate : http://mgeraci.github.com/Less-Boilerplate/
+ * v1.3
+ */
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.arial {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.calibri {
+  font-family: Calibri, Helvetica, Arial, sans-serif;
+}
+.helvetica {
+  font-family: Helvetica, Arial, sans-serif;
+}
+.lucida {
+  font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
+}
+.trebuchet {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+}
+.verdana {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
 body {
+  font-family: "Lucida Grande", Verdana, Arial, Helvetica, sans-serif;
   background: #f3f3f3 url(../images/bg-body.png) repeat-y scroll left top;
   color: #555555;
-  font-family: "Lucida Grande", verdana, arial, helvetica, sans-serif;
 }
 #wrapper {
   background: transparent;
@@ -42,8 +86,8 @@ a.issue.closed:visited {
   width: 221px;
 }
 #header h1 {
-  color: #CCCCCC;
   font-family: Calibri, Helvetica, Arial, sans-serif;
+  color: #CCCCCC;
   font-weight: bold;
   margin: 0 0 0 15px;
   position: relative;
@@ -71,9 +115,9 @@ a.issue.closed:visited {
 }
 #header input[type="text"],
 #header select {
-  border-radius: 0;
-  -moz-border-radius: 0;
   -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 #header select {
   font-size: 13px;
@@ -111,8 +155,8 @@ a.issue.closed:visited {
   text-decoration: none;
 }
 #top-menu #loggedas {
-  color: #888;
   font-family: Arial, Helvetica, sans-serif;
+  color: #888;
   height: 30px;
   line-height: 1.5em;
   margin: 0;
@@ -142,11 +186,11 @@ a.issue.closed:visited {
   border: 1px solid #CCCCCC;
 }
 #content {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   background: #FFFFFF none repeat scroll 0 0;
   border: 1px solid #CCCCCC;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
   margin: 0 0 20px;
   width: 81%;
 }
@@ -191,15 +235,9 @@ a.issue.closed:visited {
 }
 #content h2:first-of-type,
 #content .wiki h1:first-of-type {
+  -webkit-border-radius: 6px 6px 0 0;
+  -moz-border-radius: 6px 6px 0 0;
   border-radius: 6px 6px 0 0;
-  -moz-border-radius-bottomleft: 0;
-  -webkit-border-bottom-left-radius: 0px;
-  -moz-border-radius-bottomright: 0;
-  -webkit-border-bottom-right-radius: 0px;
-  -moz-border-radius-topleft: 6px;
-  -webkit-border-top-left-radius: 6px;
-  -moz-border-radius-topright: 6px;
-  -webkit-border-top-right-radius: 6px;
   margin-top: -5px;
 }
 h1,
@@ -278,17 +316,19 @@ h4 {
   text-align: right;
 }
 #main-menu ul li a {
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  border-radius: 5px 0 0 5px;
+  -webkit-box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
   border: none;
-  border-radius: 5px 0 0 5px;
-  -moz-border-radius-topleft: 5px;
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: -2px 1px 2px rgba(0, 0, 0, 0.5);
   color: #fff;
   cursor: pointer;
   display: block;
@@ -296,16 +336,15 @@ h4 {
   font-weight: normal;
   padding: 10px 15px;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25), -2px 0 1px rgba(0, 0, 0, 0.25);
-  user-select: none;
-  -moz-user-select: none;
 }
 #main-menu ul li a:hover {
-  background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
-  padding-right: 25px;
   -webkit-transition: padding-right 200ms linear;
   -moz-transition: padding-right 200ms linear;
+  -ms-transition: padding-right 200ms linear;
   -o-transition: padding-right 200ms linear;
   transition: padding-right 200ms linear;
+  background: #015ea9 url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
+  padding-right: 25px;
 }
 #main-menu ul li a.selected,
 #main-menu ul li a.selected:hover {
@@ -331,6 +370,7 @@ table.list tbody tr:hover,
 table.list tbody tr.group:hover {
   -webkit-transition: background-color 150ms linear;
   -moz-transition: background-color 150ms linear;
+  -ms-transition: background-color 150ms linear;
   -o-transition: background-color 150ms linear;
   transition: background-color 150ms linear;
 }
@@ -479,10 +519,10 @@ input[type="text"],
 input[type="password"],
 textarea,
 select {
-  border: 1px solid #d7d7d7;
-  -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
   border-radius: 2px;
+  border: 1px solid #d7d7d7;
   padding: 2px;
 }
 input[type="text"],
@@ -494,10 +534,10 @@ input[type="text"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-  border: 1px solid #ccc;
-  box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
-  -moz-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
   -webkit-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
+  -moz-box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
+  box-shadow: 0 0 5px rgba(1, 94, 169, 0.6);
+  border: 1px solid #ccc;
   outline: none;
 }
 option {
@@ -508,7 +548,7 @@ input#issue_subject {
   width: 90%;
 }
 textarea.wiki-edit {
-  font-family: Arial, Verdana, Serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
   background: #FFFFFF;
 }
@@ -568,16 +608,6 @@ ul.projects li.child {
 .tabs ul li {
   padding: 0;
 }
-.tabs ul li a {
-  -moz-border-radius-topleft: 3px;
-  -moz-border-radius-topright: 3px;
-  -webkit-border-top-left-radius: 3px;
-  -webkit-border-top-right-radius: 3px;
-  -o-border-top-left-radius: 3px;
-  -o-border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-}
 #context-menu li {
   background: none;
 }
@@ -586,6 +616,17 @@ ul.projects li.child {
   padding-top: 5px;
 }
 input[type='submit'] {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
   background: url(../images/awesome-overlay-sprite.png) 0 0 repeat-x;
   background-color: #015ea9;
   border: none;
@@ -593,31 +634,17 @@ input[type='submit'] {
   cursor: pointer;
   display: inline-block;
   padding: 5px 10px 5px !important;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-  user-select: none;
-  -moz-user-select: none;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25), -2px 0 1px rgba(0, 0, 0, 0.25);
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  -o-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 input[type='submit']:hover {
   background-position: 0 -50px;
   color: #fff !important;
 }
 input[type='submit']:active {
-  background-position: 0 -100px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
-  /* Unfortunately, Safari doesn't support inset yet */
-
-  -webkit-box-shadow: none;
-  -o-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.7);
+  background-position: 0 -100px;
   /* IE only stuff */
 
   border-bottom: 0\9;
@@ -641,23 +668,14 @@ div.wiki ul.toc li {
   padding: 1px 0 0 0;
 }
 #content > .contextual {
-  font-size: 0.9em;
-  font-family: verdana;
-  -moz-border-radius-bottomleft: 0;
-  -moz-border-radius-bottomright: 0;
-  -moz-border-radius-topleft: 5px;
-  -moz-border-radius-topright: 5px;
-  -webkit-border-bottom-left-radius: 0;
-  -webkit-border-bottom-right-radius: 0;
-  -webkit-border-top-left-radius: 5px;
-  -webkit-border-top-right-radius: 5px;
-  -o-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
   background: #FFFFFF;
   border: 1px solid #CCCCCC;
   border-bottom: none;
   float: right;
-  font-family: verdana;
   font-size: 0.9em;
   margin: 3px 0 0 0;
   position: relative;
@@ -709,15 +727,14 @@ hr {
 div.flash,
 .nodata,
 .warning {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   background-position: 10px center !important;
   background-repeat: no-repeat !important;
   border: 1px solid;
   font-size: 13px;
   margin: 0 0 15px;
-  -moz-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
-  border-radius: 6px;
   text-align: left;
   padding: 10px 1px 10px 40px;
 }
@@ -796,11 +813,10 @@ tr.message.sticky td.subject {
 }
 /* Login */
 #login-form {
-  background: #181619 url(../images/pc-bg-big.png) top left repeat-x;
-  border-radius: 6px;
-  -moz-border-radius: 6px;
   -webkit-border-radius: 6px;
-  -o-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  background: #181619 url(../images/pc-bg-big.png) top left repeat-x;
   color: #cccccc;
   height: 100%;
   margin: -7px -10px -10px;
