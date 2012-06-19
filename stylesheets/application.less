@@ -733,6 +733,10 @@ tr.message.sticky td.subject {
 
 /* Icons */
 
+.my-project { background-image: url(../images/icons/star.png); }
+em.info.error{ background-image: url(../images/icons/exclamation.png); }
+table.members td.group { background-image: url(../images/icons/users.png); }
+input#principal_search, input#user_search {	background-image: url(../images/icons/magnifier-medium-left.png); }
 
 .icon-add { background-image: url(../images/icons/plus-circle.png); }
 .icon-admin { background-image: url(../images/icons/hammer-screwdriver.png); }
@@ -795,14 +799,6 @@ tr.message.sticky td.subject {
 
 span.search_for_watchers a, span.add_attachment a {
 	background-image: url(../images/icons/plus-small-circle.png);
-}
-
-table.members td.group {
-	background-image: url(../images/icons/users.png);
-}
-
-input#principal_search, input#user_search {
-	background-image: url(../images/icons/magnifier-medium-left.png);
 }
 
 div.projects h3 {
@@ -868,7 +864,7 @@ table.boards a.board, h3.comments {
 dt{
 	&.issue { background-image: url(../images/icons/ticket.png); }
 	&.issue-edit { background-image: url(../images/icons/ticket--pencil.png); }
-	&.issue-closed, dt.issue.closed { background-image: url(../images/icons/ticket--arrow.png); }
+	&.issue-closed { background-image: url(../images/icons/ticket--arrow.png); }
 	&.issue-note { background-image: url(../images/icons/sticky-note-pin.png); }
 	&.changeset { background-image: url(../images/icons/gear.png); }
 	&.news { background-image: url(../images/icons/newspapers.png); }
@@ -878,7 +874,10 @@ dt{
 	&.attachment { background-image: url(../images/icons/paper-clip.png); }
 	&.document { background-image: url(../images/icons/document.png); }
 	&.project { background-image: url(../images/icons/block.png); }
+	&.time-entry { background-image: url(../images/icons/clock.png); }
 }
+
+#search-results dt.issue.closed { background-image: url(../images/icons/ticket--arrow.png); }
 
 a.feed{}
 .close-icon {}
