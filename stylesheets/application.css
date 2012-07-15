@@ -319,7 +319,9 @@ a.issue.closed:visited {
   width: 120px;
 }
 #top-menu {
-  background: #0071bc url(../images/pc-bg.png) repeat-x 0 bottom;
+  background: #0071BC;
+  border-bottom: 1px solid #858586;
+  outline: 1px solid #3b3a3b;
   font-size: 11px;
   height: 30px;
   padding: 0;
@@ -1193,10 +1195,10 @@ input#user_search {
   background-image: url(../images/icons/edit-outdent.png);
 }
 .jstElements button.jstb_link {
-  background-image: url(../images/icons/picture.png);
+  background-image: url(../images/icons/chain.png);
 }
 .jstElements button.jstb_img {
-  background-image: url(../images/icons/chain.png);
+  background-image: url(../images/icons/picture.png);
 }
 span.search_for_watchers a,
 span.add_attachment a {
