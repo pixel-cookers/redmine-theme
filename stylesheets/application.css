@@ -1468,6 +1468,7 @@ fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
   }
   #main {
     margin-left: 160px;
+    margin-top: 10px;
   }
   #main-menu {
     left: 0;
@@ -1480,6 +1481,10 @@ fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
   #main-menu ul li a {
     font-size: 12px;
     padding: 7px 10px;
+  }
+  p.breadcrumb {
+    top: 63px;
+    z-index: 52px;
   }
   #footer {
     margin-left: 160px;
