@@ -95,8 +95,7 @@ function injectViewportMetaTag() {
 var scripts = document.getElementsByTagName("script"),
 src = scripts[scripts.length-1].src;
 src = src.split('/');
-src = src[4];
-console.log(src);
+src = src[src.length-3];
 
 function injectAppleTouchIcons() {
 
