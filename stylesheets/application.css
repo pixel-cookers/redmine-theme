@@ -1445,9 +1445,9 @@ fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
     color: #333;
     font-size: 20px;
     position: absolute;
-    left: 155px;
+    left: 146px;
     top: 0;
-    width: 105px;
+    width: auto;
   }
   #header #quick-search {
     float: left;
@@ -1476,6 +1476,10 @@ fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
   }
   #main-menu ul {
     width: 131px;
+  }
+  #main-menu ul li a {
+    font-size: 12px;
+    padding: 7px 10px;
   }
   #footer {
     margin-left: 160px;
