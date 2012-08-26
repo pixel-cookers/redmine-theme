@@ -89,27 +89,31 @@ function injectViewportMetaTag() {
 	meta.name = 'viewport';
 	meta.content = 'width=device-width, initial-scale=1';
 	$$('head')[0].insert(meta);
+
 };
 
+var scripts = document.getElementsByTagName("script"),
+src = scripts[scripts.length-1].src;
+src = src.split('/');
+src = src[4];
+console.log(src);
+
 function injectAppleTouchIcons() {
-	var scripts = document.getElementsByTagName("script"),
-	src = scripts[scripts.length-1].src;
-	console.log(window.location.pathname);
 
 	var link = $(document.createElement('link'));
 	link.setAttribute('rel', 'apple-touch-icon');
-	link.setAttribute('href', '/themes/RedmineThemePixelCookers/images/touch/apple-touch-icon.png');
+	link.setAttribute('href', '/themes/'+src+'/images/touch/apple-touch-icon.png');
 	$$('head')[0].insert(link);
 
 	link = $(document.createElement('link'));
 	link.setAttribute('rel', 'apple-touch-icon');
-	link.setAttribute('href', '/themes/RedmineThemePixelCookers/images/touch/apple-touch-icon-72x72-precomposed.png');
+	link.setAttribute('href', '/themes/'+src+'/images/touch/apple-touch-icon-72x72-precomposed.png');
 	link.setAttribute('sizes', '72x72');
 	$$('head')[0].insert(link);
 
 	link = $(document.createElement('link'));
 	link.setAttribute('rel', 'apple-touch-icon');
-	link.setAttribute('href', '/themes/RedmineThemePixelCookers/images/touch/apple-touch-icon-114x114-precomposed.png');
+	link.setAttribute('href', '/themes/'+src+'/images/touch/apple-touch-icon-114x114-precomposed.png');
 	link.setAttribute('sizes', '114x114');
 	$$('head')[0].insert(link);
 };
