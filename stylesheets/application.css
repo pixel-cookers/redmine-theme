@@ -1449,6 +1449,12 @@ fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
     top: 0;
     width: auto;
   }
+  #header h1 a {
+    color: #555;
+  }
+  #header h1 a:hover {
+    color: #333;
+  }
   #header #quick-search {
     float: left;
     margin-top: 50px;
