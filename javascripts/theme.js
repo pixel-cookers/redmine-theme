@@ -7,15 +7,17 @@
 Event.observe(window, 'load', function() {
 	var sidebar_btn = new Element('div', { 'id': 'sidebar_btn', onclick: 'toogle_sidebar();' }).update("&nbsp;");
 	var elem = $$('#main:not(.nosidebar) #sidebar')[0];
-	
+
 	var cookie = new Cookies();
-	
+
 	if(elem != undefined){
 		elem.insert({'before' : sidebar_btn});
 		if (cookie.get('hide_sidebar')=='yes') {
 			$('main').toggleClassName('nosidebar');
-		}	
+		}
 	}
+	injectViewportMetaTag();
+	injectAppleTouchIcons();
 });
 
 function toogle_sidebar(){
@@ -81,3 +83,33 @@ var Cookies = Class.create({
         }.bind(this));
     }
 });
+
+function injectViewportMetaTag() {
+	var meta = $(document.createElement('meta'));
+	meta.name = 'viewport';
+	meta.content = 'width=device-width, initial-scale=1';
+	$$('head')[0].insert(meta);
+};
+
+function injectAppleTouchIcons() {
+	var scripts = document.getElementsByTagName("script"),
+	src = scripts[scripts.length-1].src;
+	console.log(window.location.pathname);
+
+	var link = $(document.createElement('link'));
+	link.setAttribute('rel', 'apple-touch-icon');
+	link.setAttribute('href', '/themes/RedmineThemePixelCookers/images/touch/apple-touch-icon.png');
+	$$('head')[0].insert(link);
+
+	link = $(document.createElement('link'));
+	link.setAttribute('rel', 'apple-touch-icon');
+	link.setAttribute('href', '/themes/RedmineThemePixelCookers/images/touch/apple-touch-icon-72x72-precomposed.png');
+	link.setAttribute('sizes', '72x72');
+	$$('head')[0].insert(link);
+
+	link = $(document.createElement('link'));
+	link.setAttribute('rel', 'apple-touch-icon');
+	link.setAttribute('href', '/themes/RedmineThemePixelCookers/images/touch/apple-touch-icon-114x114-precomposed.png');
+	link.setAttribute('sizes', '114x114');
+	$$('head')[0].insert(link);
+};
