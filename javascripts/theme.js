@@ -1,118 +1,137 @@
+/*!
+ * jQuery Cookie Plugin v1.3
+ * https://github.com/carhartl/jquery-cookie
+ *
+ * Copyright 2011, Klaus Hartl
+ * Dual licensed under the MIT or GPL Version 2 licenses.
+ * http://www.opensource.org/licenses/mit-license.php
+ * http://www.opensource.org/licenses/GPL-2.0
+ */
+(function ($, document, undefined) {
+
+	var pluses = /\+/g;
+
+	function raw(s) {
+		return s;
+	}
+
+	function decoded(s) {
+		return decodeURIComponent(s.replace(pluses, ' '));
+	}
+
+	var config = $.cookie = function (key, value, options) {
+
+		// write
+		if (value !== undefined) {
+			options = $.extend({}, config.defaults, options);
+
+			if (value === null) {
+				options.expires = -1;
+			}
+
+			if (typeof options.expires === 'number') {
+				var days = options.expires, t = options.expires = new Date();
+				t.setDate(t.getDate() + days);
+			}
+
+			value = config.json ? JSON.stringify(value) : String(value);
+
+			return (document.cookie = [
+				encodeURIComponent(key), '=', config.raw ? value : encodeURIComponent(value),
+				options.expires ? '; expires=' + options.expires.toUTCString() : '', // use expires attribute, max-age is not supported by IE
+				options.path    ? '; path=' + options.path : '',
+				options.domain  ? '; domain=' + options.domain : '',
+				options.secure  ? '; secure' : ''
+			].join(''));
+		}
+
+		// read
+		var decode = config.raw ? raw : decoded;
+		var cookies = document.cookie.split('; ');
+		for (var i = 0, l = cookies.length; i < l; i++) {
+			var parts = cookies[i].split('=');
+			if (decode(parts.shift()) === key) {
+				var cookie = decode(parts.join('='));
+				return config.json ? JSON.parse(cookie) : cookie;
+			}
+		}
+
+		return null;
+	};
+
+	config.defaults = {};
+
+	$.removeCookie = function (key, options) {
+		if ($.cookie(key) !== null) {
+			$.cookie(key, null, options);
+			return true;
+		}
+		return false;
+	};
+
+})(jQuery, document);
+
 /**
  * Pixel Cookers script for Redmine
  * author: Ludovic Meyer, Pixel Cookers - http://www.pixel-cookers.com
  * v1.3
  */
+(function($, document, undefined) {
+	$(document).ready(function() {
+		var sidebar_btn = $('<div id="sidebar_btn">&nbsp;</div>'), 
+		    elem = $('#main:not(.nosidebar) #sidebar');
 
-Event.observe(window, 'load', function() {
-	var sidebar_btn = new Element('div', { 'id': 'sidebar_btn', onclick: 'toogle_sidebar();' }).update("&nbsp;");
-	var elem = $$('#main:not(.nosidebar) #sidebar')[0];
+		sidebar_btn.on('click', toggle_sidebar);
 
-	var cookie = new Cookies();
+		if (elem != undefined){
+			elem.before(sidebar_btn);
+			if ($.cookie('hide_sidebar') == 'yes'){
+				$('#main').toggleClass('nosidebar');
+			}
+		}
 
-	if(elem != undefined){
-		elem.insert({'before' : sidebar_btn});
-		if (cookie.get('hide_sidebar')=='yes') {
-			$('main').toggleClassName('nosidebar');
+		injectViewportMetaTag();
+		injectAppleTouchIcons();
+	});
+
+	function toggle_sidebar(){
+		$('#main').toggleClass('nosidebar');
+		if($('#main').hasClass('nosidebar')){
+			$.cookie('hide_sidebar', 'yes');
+		}else{
+			$.cookie('hide_sidebar', 'no');
 		}
 	}
-	injectViewportMetaTag();
-	injectAppleTouchIcons();
-});
 
-function toogle_sidebar(){
-	$('main').toggleClassName('nosidebar');
-	
-	var cookie = new Cookies();
-	if($('main').hasClassName('nosidebar')){
-		cookie.set('hide_sidebar', 'yes');
-	}else{
-		cookie.set('hide_sidebar', 'no');
+	function injectViewportMetaTag(){
+		var meta = $(document.createElement('meta'));
+		meta.attr('name', 'viewport');
+		meta.attr('content', 'width=device-width, initial-scale=1');
+		$('head').append(meta);
 	}
-}
 
-var Cookies = Class.create({
-    initialize: function(path, domain) {
-        this.path = path || '/';
-        this.domain = domain || null;
-    },
-    // Sets a cookie
-    set: function(key, value, days) {
-        if (typeof key != 'string') {
-            throw "Invalid key";
-        }
-        if (typeof value != 'string' && typeof value != 'number') {
-            throw "Invalid value";
-        }
-        if (days && typeof days != 'number') {
-            throw "Invalid expiration time";
-        }
-        var setValue = key+'='+escape(new String(value));
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime()+(days*24*60*60*1000));
-            var setExpiration = "; expires="+date.toGMTString();
-        } else var setExpiration = "";
-        var setPath = '; path='+escape(this.path);
-        var setDomain = (this.domain) ? '; domain='+escape(this.domain) : '';
-        var cookieString = setValue+setExpiration+setPath+setDomain;
-        document.cookie = cookieString;
-    },
-    // Returns a cookie value or false
-    get: function(key) {
-        var keyEquals = key+"=";
-        var value = false;
-        document.cookie.split(';').invoke('strip').each(function(s){
-            if (s.startsWith(keyEquals)) {
-                value = unescape(s.substring(keyEquals.length, s.length));
-                throw $break;
-            }
-        });
-        return value;
-    },
-    // Clears a cookie
-    clear: function(key) {
-        this.set(key,'',-1);
-    },
-    // Clears all cookies
-    clearAll: function() {
-        document.cookie.split(';').collect(function(s){
-            return s.split('=').first().strip();
-        }).each(function(key){
-            this.clear(key);
-        }.bind(this));
-    }
-});
+	var scripts = document.getElementsByTagName("script"),
+	src = scripts[scripts.length-1].src;
+	src = src.split('/');
+	src = src[src.length-3];
 
-function injectViewportMetaTag() {
-	var meta = $(document.createElement('meta'));
-	meta.name = 'viewport';
-	meta.content = 'width=device-width, initial-scale=1';
-	$$('head')[0].insert(meta);
+	function injectAppleTouchIcons(){
+		var link = $(document.createElement('link'));
+		link.attr('rel', 'apple-touch-icon');
+		link.attr('href', '/themes/'+src+'/images/touch/apple-touch-icon.png');
+		$('head').append(link);
 
-};
+		link = $(document.createElement('link'));
+		link.attr('rel', 'apple-touch-icon');
+		link.attr('href', '/themes/'+src+'/images/touch/apple-touch-icon-72x72-precomposed.png');
+		link.attr('sizes', '72x72');
+		$('head').append(link);
 
-var scripts = document.getElementsByTagName("script"),
-src = scripts[scripts.length-1].src;
-src = src.split('/');
-src = src[src.length-3];
+		link = $(document.createElement('link'));
+		link.attr('rel', 'apple-touch-icon');
+		link.attr('href', '/themes/'+src+'/images/touch/apple-touch-icon-114x114-precomposed.png');
+		link.attr('sizes', '114x114');
+		$('head').append(link);
+	}
 
-function injectAppleTouchIcons() {
-
-	var link = $(document.createElement('link'));
-	link.setAttribute('rel', 'apple-touch-icon');
-	link.setAttribute('href', '/themes/'+src+'/images/touch/apple-touch-icon.png');
-	$$('head')[0].insert(link);
-
-	link = $(document.createElement('link'));
-	link.setAttribute('rel', 'apple-touch-icon');
-	link.setAttribute('href', '/themes/'+src+'/images/touch/apple-touch-icon-72x72-precomposed.png');
-	link.setAttribute('sizes', '72x72');
-	$$('head')[0].insert(link);
-
-	link = $(document.createElement('link'));
-	link.setAttribute('rel', 'apple-touch-icon');
-	link.setAttribute('href', '/themes/'+src+'/images/touch/apple-touch-icon-114x114-precomposed.png');
-	link.setAttribute('sizes', '114x114');
-	$$('head')[0].insert(link);
-};
+})(jQuery, document);
