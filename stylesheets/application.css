@@ -27,7 +27,7 @@ a:hover,a:active{color:#2A5685;}
 a:link,a:visited{color:#0071BC;}
 a.issue.closed,a.issue.closed:link,a.issue.closed:visited{color:#999;}
 #header{background:transparent;color:#888888;font-size:11px;left:0;padding:0 0 0 9px;position:absolute;top:37px;width:221px;}#header h1{font-family:Calibri,Helvetica,Arial,sans-serif;color:#CCCCCC;font-weight:bold;margin:0 0 0 15px;position:relative;text-align:right;top:65px;width:191px;z-index:50;}
-#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:0;padding:0 15px 20px;position:relative;text-align:right;top:77px;z-index:60;}
+#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:0;padding:0 15px 20px 0;position:relative;text-align:right;top:77px;width:212px;z-index:60;}
 #header a{color:#CCCCCC;}#header a:hover{color:#fff;text-decoration:none;}
 #header input[type="text"],#header select{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 #header select{font-size:13px;max-width:205px;padding:0;}

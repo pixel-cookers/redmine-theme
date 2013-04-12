@@ -71,6 +71,34 @@
 
 })(jQuery, document);
 
+
+/*
+ * Password generator
+ * http://www.designchemical.com/blog/index.php/jquery/random-password-generator-using-jquery/
+ */
+$.extend({
+	password: function (length, special) {
+		var iteration = 0;
+		var password = "";
+		var randomNumber;
+		if(special == undefined){
+			var special = false;
+		}
+		while(iteration < length){
+			randomNumber = (Math.floor((Math.random() * 100)) % 94) + 33;
+			if(!special){
+				if ((randomNumber >=33) && (randomNumber <=47)) { continue; }
+				if ((randomNumber >=58) && (randomNumber <=64)) { continue; }
+				if ((randomNumber >=91) && (randomNumber <=96)) { continue; }
+				if ((randomNumber >=123) && (randomNumber <=126)) { continue; }
+			}
+			iteration++;
+			password += String.fromCharCode(randomNumber);
+		}
+		return password;
+	}
+});
+
 /**
  * Pixel Cookers script for Redmine
  * author: Ludovic Meyer, Pixel Cookers - http://www.pixel-cookers.com
@@ -78,8 +106,14 @@
  */
 (function($, document, undefined) {
 	$(document).ready(function() {
-		var sidebar_btn = $('<div id="sidebar_btn">&nbsp;</div>'), 
-		    elem = $('#main:not(.nosidebar) #sidebar');
+		var cfg = {
+			"password.length": 7,
+			"password.special": false
+		};
+
+
+		var sidebar_btn = $('<div id="sidebar_btn">&nbsp;</div>'),
+			elem = $('#main:not(.nosidebar) #sidebar');
 
 		sidebar_btn.on('click', toggle_sidebar);
 
@@ -92,7 +126,38 @@
 
 		injectViewportMetaTag();
 		injectAppleTouchIcons();
+
+		// Password generation in user creation
+		var genContainer = $(document.createElement('p'));
+		var genLabel = $(document.createElement('label'));
+		var genBtn = $(document.createElement('input')).attr('id', 'generate-password').attr('type', "submit").attr('value', 'Generate password');
+		var useBtn = $(document.createElement('input')).attr('id', 'use-password').attr('type', "submit").attr('value', 'Use password');
+		var passFields = $('.controller-users.action-new #password_fields, .controller-users.action-create #password_fields, .controller-users.action-edit #password_fields');
+
+		passFields.append(genContainer);
+		genContainer.append(genLabel).append(genBtn).append(useBtn);
+		useBtn.hide();
+
+
+		genBtn.on('click', function(){
+			var password = $.password(cfg['password.length'],cfg['password.special']);
+			var info = passFields.find('.info');
+			useBtn.fadeIn().attr('attr-value', password);
+			info.html('Password generated : '+password);
+			$('#user_password, #user_password_confirmation').val('');
+			return false;
+		});
+
+		useBtn.on('click', function(){
+			$('#user_password, #user_password_confirmation').val($(this).attr('attr-value'));
+			$(this).fadeOut();
+			return false;
+		});
 	});
+
+	function get_theme_config() {
+
+	}
 
 	function toggle_sidebar(){
 		$('#main').toggleClass('nosidebar');
@@ -111,7 +176,7 @@
 	}
 
 	var scripts = document.getElementsByTagName("script"),
-	src = scripts[scripts.length-1].src;
+		src = scripts[scripts.length-1].src;
 	src = src.split('/');
 	src = src[src.length-3];
 
