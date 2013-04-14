@@ -1142,6 +1142,12 @@ a.close-icon:hover {}
 	border-top: 1px solid #dcdcdc;
 }
 
+.stopwatch-container {
+    margin-top: 5px;
+    #stopwatch{
+      margin-right: 10px;
+    }
+}
 
 /*---------- Colors ----------*/
 
@@ -1156,6 +1162,11 @@ a, a:link, a:visited, #sidebar a.selected { color: #0071BC }
 #main-menu ul li a { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
 #main-menu ul li a:hover { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
 input[type="submit"] { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
+input[type="submit"].greydient {
+  #gradient > .vertical(#FFFFFF, #E6E6E6);
+  color: #333 !important;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+}
 
 /* Boxes */
 fieldset#filters, fieldset#date-range { background-color: #F5FCFC }
