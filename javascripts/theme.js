@@ -30,8 +30,8 @@
 		// Password generation in user creation
 		var genContainer = $(document.createElement('p'));
 		var genLabel = $(document.createElement('label'));
-		var genBtn = $(document.createElement('input')).attr('id', 'generate-password').attr('type', "submit").attr('value', 'Generate password');
-		var useBtn = $(document.createElement('input')).attr('id', 'use-password').attr('type', "submit").attr('value', 'Use password');
+		var genBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'generate-password').attr('class', "btn greydient").text('Generate password');
+		var useBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'use-password').attr('class', "btn greydient").text('Use password');
 		var passFields = $('.controller-users.action-new #password_fields, .controller-users.action-create #password_fields, .controller-users.action-edit #password_fields');
 
 		passFields.append(genContainer);
@@ -56,7 +56,7 @@
 
 		if(cfg['stopwatch.enabled']) {
 			var stopwatchContainer = $(document.createElement('div')).attr('class', 'stopwatch-container');
-			var runBtn = $(document.createElement('input')).attr('id', 'stopwatch-run').attr('class', 'greydient').attr('type', "submit").attr('value', 'Play');
+			var runBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'stopwatch-run').attr('class', 'btn greydient').html('value', 'Play').html('Play');
 			var stopwatch = $(document.createElement('span')).attr('id', 'stopwatch').attr('class', 'icon icon-time');
 			$('#time_entry_hours').parent().append(stopwatchContainer);
 			stopwatchContainer.append(stopwatch).append(runBtn);
@@ -71,14 +71,33 @@
 				})
 
 				if($(this).attr('value') == 'Play') {
-					$(this).attr('value', 'Pause');
+					$(this).attr('value', 'Pause').html('Pause');
 				} else {
-					$(this).attr('value', 'Play');
+					$(this).attr('value', 'Play').html('Play');
 				}
+
+			    window.onbeforeunload = function (e) {
+				    var e = e || window.event;
+				    if (e) {
+				        e.returnValue = 'You are running a timer.';
+				    }
+				    return 'You are running a timer.';
+				};
 
 				return false;
 			});
+
+			$('.controller-issues.action-show #issue-form input[type="submit"]').on('click', function(){
+				window.onbeforeunload = function (e) {
+				    var e = e || window.event;
+				    if (e) {
+				        e.returnValue = null;
+				    }
+				    return null;
+				};
+			});
 		}
+
 	});
 
 	function get_theme_config() {
