@@ -56,7 +56,7 @@
 
 		if(cfg['stopwatch.enabled']) {
 			var stopwatchContainer = $(document.createElement('div')).attr('class', 'stopwatch-container');
-			var runBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'stopwatch-run').attr('class', 'btn greydient').html('value', 'Play').html('Play');
+			var runBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'stopwatch-run').attr('class', 'btn greydient').attr('value', 'Play').html('Play');
 			var stopwatch = $(document.createElement('span')).attr('id', 'stopwatch').attr('class', 'icon icon-time');
 			$('#time_entry_hours').parent().append(stopwatchContainer);
 			stopwatchContainer.append(stopwatch).append(runBtn);
