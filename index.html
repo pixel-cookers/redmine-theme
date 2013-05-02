@@ -18,20 +18,20 @@
     <link rel="stylesheet/less" href="less/style.less">
     <link rel="stylesheet" href="js/colorbox/colorbox.css">
 
-    <script src="js/less.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/colorbox/jquery.colorbox-min.js"></script>
-    <script src="js/script.js"></script>
+      <script src="js/less.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+      <script src="js/bootstrap-scrollspy.js"></script>
+      <script src="js/colorbox/jquery.colorbox-min.js"></script>
+      <script src="js/script.js"></script>
 
     <!-- Le fav -->
     <link rel="shortcut icon" href="images/favicon.ico">
   </head>
 
-  <body >
+  <body data-spy="scroll" data-target=".navbar-fixed-top">
   	<a href="https://github.com/pixel-cookers/RedmineThemePixelCookers"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
-    <div class="navbar navbar-fixed-top" style="display: none;" data-scrollspy="scrollspy">
+    <div class="navbar navbar-fixed-top" style="display: none;">
       <div class="navbar-inner">
         <div class="container">
           <ul class="nav">
@@ -147,6 +147,20 @@
                   <span class="magnifier"></span>
                 </a>
               </li>
+                <li class="span3">
+                </li>
+                <li class="span3">
+                    <a class="thumbnail" href="images/0013.png">
+                        <img src="images/th0013.png" alt="">
+                        <span class="magnifier"></span>
+                    </a>
+                </li>
+                <li class="span3">
+                    <a class="thumbnail" href="images/0014.png">
+                        <img src="images/th0014.png" alt="">
+                        <span class="magnifier"></span>
+                    </a>
+                </li>
             </ul>
           </div>
         </div>
@@ -187,6 +201,33 @@
         </div>
       </div>
     </section>
+
+    <section id="configuration">
+        <div class="container">
+            <div class="page-header">
+                <h1>Configurations</h1>
+            </div>
+            <div class="row">
+                <div class="span12">
+                    <p>There are some configurations you can do to make this theme your own.</p>
+                    <h2>Colors</h2>
+                    <ol>
+                        <li>At the end of <code>stylesheets/application.less</code> you will find the piece of code below.</li>
+                        <li>Uncomment it, and put the colors you want.</li>
+                        <li>Recompile the file with <a href="http://winless.org/">WinLess</a></li>
+                    </ol>
+
+                    <script src="https://gist.github.com/lmeyer/5499456.js?file=application.less"></script>
+                    <h2>Stopwath / Password generator</h2>
+
+                    <p>
+                        You can find the following configurations in <code>javascripts/theme.js</code>.
+                    </p>
+                    <script src="https://gist.github.com/lmeyer/5499456.js?file=theme.js"></script>
+                </div>
+            </div>
+        </div>
+    </section>
       
     <section id="changelog">
       <div class="container">
@@ -196,11 +237,14 @@
         <div class="row">
           <div class="span12">
             <dl>
-              <dt>Current master (Redmine v2.2.x compatible) <span class="label label-info">Major realease</span></dt>
+              <dt>v2.1 <span class="label">Major features</span></dt>
+              <dd>Javascript stopwatch in order to track time easily</dd>
+              <dd>Javascript password generator in user creation page</dd>
               <dd>Javascript changed to be compatible with jQuery (thanks to <a href="https://github.com/yuters">yuters</a>)</dd>
               <dd>Progress bar fixed</dd>
               <dd>Priority colors compatible with redmine 2.2</dd>
               <dd>Add compatibility with new <a href="http://www.redmine.org/plugins/redmine_favourite_projects">favourite_projects</a> plugin</dd>
+              <dd>Bug fixes</dd>
               <dt>v2.0.1 (Redmine v1.4.x and v2.0.x compatible) <span class="label label-warning">Last 1.4 compatible version</span></dt>
               <dd>Responsive ability in 1024px</dd>
               <dd>iDevice icons added</dd>
