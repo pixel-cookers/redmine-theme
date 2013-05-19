@@ -448,8 +448,8 @@ textarea.wiki-edit {
 	padding-left: 0;
 }
 #content .splitcontentright .projects.box > ul > li {
-	background: none;
-	padding-left: 0;
+    list-style: none;
+    padding: 4px 0;
 }
 #content .splitcontentright .projects.box > ul > li:first-line,
 #content .splitcontentleft .news.box  p > a + a,
@@ -463,7 +463,7 @@ textarea.wiki-edit {
 	font-weight: normal;
 }
 
-ul{
+/* ul{
 	margin-left: 10px;
 	padding-left: 0;
 
@@ -492,7 +492,7 @@ ul{
 	&.projects li.child {
 		background-position: 0 4px;
 	}
-}
+}*/
 
 #admin-menu li {
 	background: none;
@@ -560,25 +560,33 @@ div.wiki {
         padding: 0 3px 2px;
     }
 
-	pre {
+    code {
+        color: #d14;
+        background-color: #f7f7f9;
+        border: 1px solid #e1e1e8;
+        padding: 2px 4px;
+        white-space: nowrap;
+    }
+
+    pre {
         .border-radius(4px);
         border: 1px solid #ccc;
         border: 1px solid rgba(0, 0, 0, 0.15);
         background-color: #f5f5f5;
         margin: 0 0 10px;
-		padding: 9.5px;
+        padding: 9.5px;
         white-space: pre;
         white-space: pre-wrap;
         word-break: break-all;
         word-wrap: break-word;
-	}
+    }
 
-    code {
-      color: #d14;
-      background-color: #f7f7f9;
-      border: 1px solid #e1e1e8;
-      padding: 2px 4px;
-      white-space: nowrap;
+    pre code {
+        background: none;
+        border: none;
+        color: #333333;
+        padding: 0;
+        white-space: pre-wrap;
     }
 
 	ul.toc {
@@ -592,12 +600,13 @@ div.wiki {
 	}
 
     img {
-      max-width: 100%;
+        max-width: 100%;
     }
 
-  ul, ol {
-    line-height: 1.3em;
-  }
+    ul, ol, dl {
+        line-height: 1.6em;
+        padding-left: 30px;
+    }
 }
 
 #content > .contextual {
@@ -949,6 +958,12 @@ a.close-icon:hover {}
 		text-align: left;
 		background-image: none;
 	}
+}
+
+/* Redmine Stealth Plugin */
+
+.stealth_on #header {
+    background: none;
 }
 
 /*---------- Only Pixel Cookers Theme ----------*/
