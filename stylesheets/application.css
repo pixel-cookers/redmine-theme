@@ -237,7 +237,7 @@ dt.time-entry{background-image:url(../images/icons/clock.png);}
 #search-results dt.issue.closed{background-image:url(../images/icons/ticket--arrow.png);}
 #code-review-assign-link{margin-bottom:10px;}
 #project_quick_jump_box_chzn li{text-align:left;background-image:none;}
-.stealth_on #header{background:none;}
+body.stealth_on #header{background:none !important;}
 #sidebar_btn{background:transparent url(../images/menu-arrows.png) no-repeat scroll right -33px;cursor:w-resize;height:20px;margin:0;padding:0;position:absolute;right:10px;top:60px;width:13%;}
 #main.nosidebar #sidebar_btn{background-position:left 5px;width:15px;}
 #sidebar{border-top:1px solid #dcdcdc;}
