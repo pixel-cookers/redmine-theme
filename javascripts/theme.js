@@ -76,12 +76,12 @@
 					$(this).attr('value', 'Play').html('Play');
 				}
 
-			    window.onbeforeunload = function (e) {
-				    var e = e || window.event;
-				    if (e) {
-				        e.returnValue = 'You are running a timer.';
-				    }
-				    return 'You are running a timer.';
+				window.onbeforeunload = function (e) {
+					var e = e || window.event;
+					if (e) {
+						e.returnValue = 'You are running a timer.';
+					}
+					return 'You are running a timer.';
 				};
 
 				return false;
@@ -95,13 +95,13 @@
 				$('#stopwatch-run').trigger('click');
 			}
 
-			$('.controller-issues.action-show #issue-form input[type="submit"]').on('click', function(){
+			$('.controller-issues.action-show #issue-form input[type="submit"], .controller-timelog .edit_time_entry input[type="submit"], .controller-timelog .new_time_entry input[type="submit"]').on('click', function(){
 				window.onbeforeunload = function (e) {
-				    var e = e || window.event;
-				    if (e) {
-				        e.returnValue = null;
-				    }
-				    return null;
+					var e = e || window.event;
+					if (e) {
+						e.returnValue = null;
+					}
+					return null;
 				};
 			});
 		}
@@ -127,17 +127,17 @@
 			$.ajax({
 				url: '/users/current.json?key='+api_key
 			}).done(function( json ) {
-				$.each(json.user.custom_fields, function(i, item) {
-					if(item.name == "Timer auto ?") {
-						//console.log(item.name + item.value);
-						$.cookie(item.name, item.value, {path: '/'});
-					}
+					$.each(json.user.custom_fields, function(i, item) {
+						if(item.name == "Timer auto ?") {
+							//console.log(item.name + item.value);
+							$.cookie(item.name, item.value, {path: '/'});
+						}
+					});
+					$('#load-options').html('Reload User Preferences');
+					$('#load-result').html('User Preferences Loaded');
+				}).fail(function(){
+					$('#load-result').html('API request failed.');
 				});
-				$('#load-options').html('Reload User Preferences');
-				$('#load-result').html('User Preferences Loaded');
-			}).fail(function(){
-				$('#load-result').html('API request failed.');
-			});
 		} else {
 			$('#load-result').html('No API key, please generate one. If you can\'t, please ask your administrator.')
 		}
@@ -184,11 +184,11 @@
 	}
 
 	function leftPad(number, targetLength) {
-	    var output = number + '';
-	    while (output.length < targetLength) {
-	        output = '0' + output;
-	    }
-	    return output;
+		var output = number + '';
+		while (output.length < targetLength) {
+			output = '0' + output;
+		}
+		return output;
 	}
 
 	function checkDecimal(str) {
@@ -198,33 +198,33 @@
 			var ch = str.substring(i, i+1);
 			if ((ch < "0" || "9" < ch) && ch != '.') {
 				alert("Only numeric input is allowed!\n\n"
-				+ parseFloat(ok) + " will be used because '"
-				+ str + "' is invalid.\nYou may correct "
-				+ "this entry and try again.");
+					+ parseFloat(ok) + " will be used because '"
+					+ str + "' is invalid.\nYou may correct "
+					+ "this entry and try again.");
 				return parseFloat(ok);
 			}
 			else ok += ch;
 		}
-		return str;
+		return parseFloat(str);
 	}
 
 	function makeTime(value) {
 		var num = (checkDecimal(value)); // validates input
 		if (num) {
 			var hour = parseInt(num);
-		   	num -= parseInt(num);
+			num -= parseInt(num);
 			num=num.toFixed(13)
-		 	num *= 60;
+			num *= 60;
 
 			var min = parseInt(num);
-		   	num -= parseInt(num);
+			num -= parseInt(num);
 			num=num.toFixed(13)
-		   	num *= 60;
+			num *= 60;
 			var sec = parseInt(num);
 			return leftPad(hour, 2) + ':' + leftPad(min, 2) + ':' + leftPad(sec, 2);
-	   } else {
-	   		return '00:00:00';
-	   }
+		} else {
+			return '00:00:00';
+		}
 	}
 
 })(jQuery, document);
