@@ -24,6 +24,8 @@
 			}
 		}
 
+		$('.controller-repositories .entry a[href$=".SyncTrash"], .controller-repositories .entry a[href$=".SyncID"], .controller-repositories .entry a[href$=".SyncIgnore"]').parent().parent().remove();
+
 		injectViewportMetaTag();
 		injectAppleTouchIcons();
 
