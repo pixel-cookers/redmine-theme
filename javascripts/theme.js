@@ -24,6 +24,8 @@
 			}
 		}
 
+		$('.controller-repositories .entry a[href$=".SyncTrash"], .controller-repositories .entry a[href$=".SyncID"], .controller-repositories .entry a[href$=".SyncIgnore"]').parent().parent().remove();
+
 		injectViewportMetaTag();
 		injectAppleTouchIcons();
 
@@ -62,9 +64,9 @@
 			stopwatchContainer.append(stopwatch).append(runBtn);
 			stopwatch.html('00:00:00');
 
-
 			$('#stopwatch-run').on('click', function(){
-				stopwatch.stopwatch().stopwatch('toggle');
+				var num = checkDecimal($('#time_entry_hours').attr('value'))*3600000;
+				stopwatch.stopwatch({startTime: num}).stopwatch('toggle');
 				stopwatch.bind('tick.stopwatch', function(e, elapsed){
 					var num = elapsed/3600000;
 					$('#time_entry_hours').attr('value', num.toFixed(cfg['stopwatch.precision']));
@@ -76,40 +78,79 @@
 					$(this).attr('value', 'Play').html('Play');
 				}
 
-			    window.onbeforeunload = function (e) {
-				    var e = e || window.event;
-				    if (e) {
-				        e.returnValue = 'You are running a timer.';
-				    }
-				    return 'You are running a timer.';
+				window.onbeforeunload = function (e) {
+					var e = e || window.event;
+					if (e) {
+						e.returnValue = 'You are running a timer.';
+					}
+					return 'You are running a timer.';
 				};
 
 				return false;
 			});
 
-			$('.controller-issues.action-show #issue-form input[type="submit"]').on('click', function(){
+			$('#time_entry_hours').on('keyup', function(){
+				stopwatch.html(makeTime(this.value));
+			})
+
+			if($.cookie("Timer auto ?") == 1) {
+				$('#stopwatch-run').trigger('click');
+			}
+
+			$('.controller-issues.action-show #issue-form input[type="submit"], .controller-timelog .edit_time_entry input[type="submit"], .controller-timelog .new_time_entry input[type="submit"]').on('click', function(){
 				window.onbeforeunload = function (e) {
-				    var e = e || window.event;
-				    if (e) {
-				        e.returnValue = null;
-				    }
-				    return null;
+					var e = e || window.event;
+					if (e) {
+						e.returnValue = null;
+					}
+					return null;
 				};
 			});
 		}
 
+		var loadTitle = $(document.createElement('h3')).html('Pixel Cookers Theme');
+		var loadBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'load-options').attr('class', 'btn greydient').html('Load User Preferences');
+		var loadResult = $(document.createElement('p')).attr('id', 'load-result');
+		var mySidebar = $('.controller-my.action-account #sidebar');
+
+		mySidebar.append(loadTitle).append(loadBtn).append(loadResult);
+		if($.cookie("Timer auto ?")) {
+			$('#load-options').html('Reload User Preferences');
+			$('#load-result').html('User Preferences Loaded');
+		}
+		loadBtn.on('click', function(){
+			loadUserOptions();
+		});
 	});
 
-	function get_theme_config() {
-
+	function loadUserOptions() {
+		var api_key = $('#api-access-key').html()
+		if(api_key != null){
+			$.ajax({
+				url: '/users/current.json?key='+api_key
+			}).done(function( json ) {
+					$.each(json.user.custom_fields, function(i, item) {
+						if(item.name == "Timer auto ?") {
+							//console.log(item.name + item.value);
+							$.cookie(item.name, item.value, {path: '/'});
+						}
+					});
+					$('#load-options').html('Reload User Preferences');
+					$('#load-result').html('User Preferences Loaded');
+				}).fail(function(){
+					$('#load-result').html('API request failed.');
+				});
+		} else {
+			$('#load-result').html('No API key, please generate one. If you can\'t, please ask your administrator.')
+		}
 	}
 
 	function toggle_sidebar(){
 		$('#main').toggleClass('nosidebar');
 		if($('#main').hasClass('nosidebar')){
-			$.cookie('hide_sidebar', 'yes');
+			$.cookie('hide_sidebar', 'yes', {path: '/'});
 		}else{
-			$.cookie('hide_sidebar', 'no');
+			$.cookie('hide_sidebar', 'no', {path: '/'});
 		}
 	}
 
@@ -142,6 +183,50 @@
 		link.attr('href', '/themes/'+src+'/images/touch/apple-touch-icon-114x114-precomposed.png');
 		link.attr('sizes', '114x114');
 		$('head').append(link);
+	}
+
+	function leftPad(number, targetLength) {
+		var output = number + '';
+		while (output.length < targetLength) {
+			output = '0' + output;
+		}
+		return output;
+	}
+
+	function checkDecimal(str) {
+		if (!str) return 0;
+		var ok = "";
+		for (var i = 0; i < str.length; i++) {
+			var ch = str.substring(i, i+1);
+			if ((ch < "0" || "9" < ch) && ch != '.') {
+				alert("Only numeric input is allowed!\n\n"
+					+ parseFloat(ok) + " will be used because '"
+					+ str + "' is invalid.\nYou may correct "
+					+ "this entry and try again.");
+				return parseFloat(ok);
+			}
+			else ok += ch;
+		}
+		return parseFloat(str);
+	}
+
+	function makeTime(value) {
+		var num = (checkDecimal(value)); // validates input
+		if (num) {
+			var hour = parseInt(num);
+			num -= parseInt(num);
+			num=num.toFixed(13)
+			num *= 60;
+
+			var min = parseInt(num);
+			num -= parseInt(num);
+			num=num.toFixed(13)
+			num *= 60;
+			var sec = parseInt(num);
+			return leftPad(hour, 2) + ':' + leftPad(min, 2) + ':' + leftPad(sec, 2);
+		} else {
+			return '00:00:00';
+		}
 	}
 
 })(jQuery, document);

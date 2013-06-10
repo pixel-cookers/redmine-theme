@@ -159,7 +159,7 @@ input#principal_search,input#user_search{background-image:url(../images/icons/ma
 .icon-cancel{background-image:url(../images/icons/arrow-curve-180-left.png);}
 .icon-multiple{background-image:url(../images/icons/blue-documents-stack.png);}
 .icon-folder{background-image:url(../images/icons/folder-horizontal.png);}
-.open .icon-folder{background-image:url(../images/icons/foler-horizontal-open.png);}
+.open .icon-folder{background-image:url(../images/icons/folder-horizontal-open.png);}
 .icon-package{background-image:url(../images/icons/box-label.png);}
 .icon-user{background-image:url(../images/icons/user-black.png);}
 .icon-projects{background-image:url(../images/icons/block.png);}
