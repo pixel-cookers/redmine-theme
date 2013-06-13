@@ -26,21 +26,25 @@ a{color:#0071BC;}a:hover{text-decoration:underline;}
 a:hover,a:active{color:#2A5685;}
 a:link,a:visited{color:#0071BC;}
 a.issue.closed,a.issue.closed:link,a.issue.closed:visited{color:#999;}
-#header{background:transparent;color:#888888;font-size:11px;left:0;padding:0 0 0 9px;position:absolute;top:37px;width:221px;}#header h1{font-family:Calibri,Helvetica,Arial,sans-serif;color:#CCCCCC;font-weight:bold;margin:0 0 0 15px;position:relative;text-align:right;top:65px;width:191px;z-index:50;}
-#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:0;padding:0 15px 20px 0;position:relative;text-align:right;top:77px;width:212px;z-index:60;}
+#top-menu{background:#0071BC;border-bottom:1px solid #858586;font-size:11px;height:30px;outline:1px solid #3b3a3b;padding:0;position:relative;z-index:20;}#top-menu a{color:#DEDEDE;font-weight:normal;padding:4px 5px;}#top-menu a:hover{color:#fff;text-decoration:none;}
+#top-menu ul{padding:0 21px;}#top-menu ul li{background:none;color:#ddd;line-height:30px;margin-right:4px;}
+#top-menu #loggedas{color:#efefef;height:30px;line-height:30px;margin:0;}#top-menu #loggedas a{padding:0;}
+#header{background:transparent;color:#888888;font-size:11px;height:100%;left:0;padding-left:9px;padding-top:32px;position:absolute;top:0;width:50px;z-index:10;width:221px;}#header:hover{-webkit-transition:width 200ms linear;-moz-transition:width 200ms linear;-ms-transition:width 200ms linear;-o-transition:width 200ms linear;transition:width 200ms linear;width:221px;}
+#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:15px 15px 20px 0;padding:0;text-align:right;}
 #header a{color:#CCCCCC;}#header a:hover{color:#fff;text-decoration:none;}
 #header input[type="text"],#header select{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 #header select{font-size:13px;max-width:205px;padding:0;}
 #header input[type="text"]{font-size:11px;padding:2px 2px;width:120px;}
-#top-menu{background:#0071BC;border-bottom:1px solid #858586;outline:1px solid #3b3a3b;font-size:11px;height:30px;padding:0;}#top-menu ul{padding:0 21px;}#top-menu ul li{background:none;color:#ddd;line-height:30px;margin-right:4px;}#top-menu ul li a{color:#DEDEDE;font-weight:normal;padding:4px 5px;}#top-menu ul li a:hover{color:#fff;text-decoration:none;}
-#top-menu #loggedas{font-family:Arial,Helvetica,sans-serif;color:#888;height:30px;line-height:1.5em;margin:0;padding:0 15px 0 24px;overflow:hidden;position:absolute;text-align:right;top:80px;width:191px;z-index:999;}#top-menu #loggedas a{color:#ccc;font-weight:normal;margin:0;}#top-menu #loggedas a:hover{color:#fff;text-decoration:none;}
-#main{background:none;margin:0 30px 0 260px;padding:40px 0 0 0;}#main.nosidebar #content{border:1px solid #CCCCCC;}
+#header h1{font-family:Calibri,Helvetica,Arial,sans-serif;color:#CCCCCC;font-weight:bold;margin:15px;text-align:right;z-index:50;}
+#main{background:none;margin:0 30px 0 251px;padding:40px 0 0 10px;}#main.nosidebar #content{border:1px solid #CCCCCC;}
 #content{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#FFFFFF none repeat scroll 0 0;border:1px solid #CCCCCC;margin:0 0 20px;width:81%;}
 #sidebar{width:15%;}
-#footer{background-color:#EEEEEE;border-top:1px solid #CCCCCC;clear:left;color:#666666;font-size:9px;margin:40px 30px 0 255px;padding:15px 0;text-align:left;}
-#footer a{color:#0071BC;}#footer a:link,#footer a:visited{color:#0071BC;}
+#footer{background-color:#EEEEEE;border-top:1px solid #CCCCCC;clear:left;color:#666666;font-size:9px;margin:40px 30px 0 255px;padding:15px 0;text-align:left;}#footer a{color:#0071BC;}#footer a:link,#footer a:visited{color:#0071BC;}
 #footer a:hover{color:#000;text-decoration:none;}
 #footer .bgr:after{content:"| Theme by Pixel Cookers";}
+#main-menu{font-family:Helvetica,Arial,sans-serif;margin:0;padding:0;position:relative;left:5px;}#main-menu ul{width:216px;}#main-menu ul li{float:none;list-style-type:none;margin:0;padding-bottom:10px;text-align:right;}#main-menu ul li a{-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;-webkit-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;border:none;color:#fff;cursor:pointer;display:block;font-size:14px;font-weight:normal;padding:10px 15px;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25),-2px 0 1px rgba(0, 0, 0, 0.25);}#main-menu ul li a:hover{-webkit-transition:padding-right 200ms linear;-moz-transition:padding-right 200ms linear;-ms-transition:padding-right 200ms linear;-o-transition:padding-right 200ms linear;transition:padding-right 200ms linear;padding-right:25px;}
+#main-menu ul li a:active{-webkit-box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);border-bottom:0\9;border-top:1px solid #666\9;}
+#main-menu ul li a.selected,#main-menu ul li a.selected:hover{background:#f3f3f3;color:#333333;font-weight:bold;text-shadow:none;}
 #content h2,#content .wiki h1{background-color:#e6e6e6;background-image:-moz-linear-gradient(top, #ececec, #dedede);background-image:-ms-linear-gradient(top, #ececec, #dedede);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ececec), to(#dedede));background-image:-webkit-linear-gradient(top, #ececec, #dedede);background-image:-o-linear-gradient(top, #ececec, #dedede);background-image:linear-gradient(top, #ececec, #dedede);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#dedede', GradientType=0);border-bottom:1px solid #CCCCCC;color:#000;font-size:17px;padding:10px 15px;margin-bottom:10px;margin-left:-10px;margin-right:-10px;}#content h2:first-of-type,#content .wiki h1:first-of-type{-webkit-border-radius:6px 6px 0 0;-moz-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0;height:23px;margin-top:-5px;}
 h1,h2,h3,h4{color:#222222;}
 h1{font-size:24px;font-weight:normal;margin:0 0 0 0.25em;padding:0 0 10px;text-align:left;}
@@ -52,9 +56,6 @@ h3,h4{font-weight:normal;}
 #sidebar h3{border-bottom:1px solid #DCDCDC;padding:6px 8px;}
 .wiki h3{font-size:16px;}
 #sidebar a.selected{background-color:transparent;color:inherit;font-weight:bold;margin:0;padding:0;}
-#main-menu{font-family:Helvetica,Arial,sans-serif;margin:70px 0 0 9px;padding:0;position:relative;}#main-menu ul{width:206px;}#main-menu ul li{float:none;list-style-type:none;margin:0;padding-bottom:10px;text-align:right;}#main-menu ul li a{-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;-webkit-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;border:none;color:#fff;cursor:pointer;display:block;font-size:14px;font-weight:normal;padding:10px 15px;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25),-2px 0 1px rgba(0, 0, 0, 0.25);}#main-menu ul li a:hover{-webkit-transition:padding-right 200ms linear;-moz-transition:padding-right 200ms linear;-ms-transition:padding-right 200ms linear;-o-transition:padding-right 200ms linear;transition:padding-right 200ms linear;padding-right:25px;}
-#main-menu ul li a:active{-webkit-box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);border-bottom:0\9;border-top:1px solid #666\9;}
-#main-menu ul li a.selected,#main-menu ul li a.selected:hover{background:#f3f3f3;color:#333333;font-weight:bold;text-shadow:none;}
 table.list{border:none;}table.list th{background-color:#fff;}
 table.list tbody td,table.list tbody tr td{border-bottom:solid 1px #ddd;font-size:11px;padding:7px 10px 7px 3px;}
 table.list tbody tr:hover,table.list tbody tr.group:hover{-webkit-transition:background-color 150ms linear;-moz-transition:background-color 150ms linear;-ms-transition:background-color 150ms linear;-o-transition:background-color 150ms linear;transition:background-color 150ms linear;}
