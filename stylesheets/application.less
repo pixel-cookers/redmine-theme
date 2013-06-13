@@ -47,7 +47,8 @@ a {
   height: @topMenuHeight;
   outline: 1px solid #3b3a3b;
   padding: 0;
-  position: relative;
+  position: fixed;
+  width: 100%;
   z-index: 20;
 
   a {
@@ -93,19 +94,15 @@ a {
   padding-left: 9px;
   padding-right: 0;
   padding-top: @topMenuHeight+2px;
-  position: absolute;
+  position: fixed;
   top: 0;
-  width: @headerWidth;
+  width: @headerWidthOpen;
   z-index: 10;
 
-  &:hover {
-    .transition(width 200ms linear);
-    width: @headerWidthOpen;
-  }
-
-  //&.open {
-  width: @headerWidthOpen;
-  //}
+//  &:hover {
+//    .transition(width 200ms linear);
+//    width: @headerWidthOpen;
+//  }
 
   #quick-search {
     .arial;
@@ -148,7 +145,7 @@ a {
 #main {
   background: none;
   margin: 0 30px 0 @headerWidthOpen+30px;
-  padding: 40px 0 0 10px;
+  padding: @topMenuHeight+40px 0 0 10px;
 
   &.nosidebar #content {
     border: 1px solid #CCCCCC;
@@ -944,7 +941,7 @@ body.stealth_on #header {
   padding: 0;
   position: absolute;
   right: 10px;
-  top: 60px;
+  top: @topMenuHeight+29px;
   width: 13%;
 }
 #main.nosidebar #sidebar_btn {

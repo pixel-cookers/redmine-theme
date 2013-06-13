@@ -26,17 +26,16 @@ a{color:#0071BC;}a:hover{text-decoration:underline;}
 a:hover,a:active{color:#2A5685;}
 a:link,a:visited{color:#0071BC;}
 a.issue.closed,a.issue.closed:link,a.issue.closed:visited{color:#999;}
-#top-menu{background:#0071BC;border-bottom:1px solid #858586;font-size:11px;height:30px;outline:1px solid #3b3a3b;padding:0;position:relative;z-index:20;}#top-menu a{color:#DEDEDE;font-weight:normal;padding:4px 5px;}#top-menu a:hover{color:#fff;text-decoration:none;}
+#top-menu{background:#0071BC;border-bottom:1px solid #858586;font-size:11px;height:30px;outline:1px solid #3b3a3b;padding:0;position:fixed;width:100%;z-index:20;}#top-menu a{color:#DEDEDE;font-weight:normal;padding:4px 5px;}#top-menu a:hover{color:#fff;text-decoration:none;}
 #top-menu ul{padding:0 21px;}#top-menu ul li{background:none;color:#ddd;line-height:30px;margin-right:4px;}
 #top-menu #loggedas{color:#efefef;height:30px;line-height:30px;margin:0;}#top-menu #loggedas a{padding:0;}
-#header{background:url(../images/bg-body.png) repeat-y scroll left top;color:#888888;font-size:11px;height:100%;left:0;padding-left:9px;padding-right:0;padding-top:32px;position:absolute;top:0;width:50px;z-index:10;width:220px;}#header:hover{-webkit-transition:width 200ms linear;-moz-transition:width 200ms linear;-ms-transition:width 200ms linear;-o-transition:width 200ms linear;transition:width 200ms linear;width:220px;}
-#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:15px 15px 20px 0;padding:0;text-align:right;}
+#header{background:url(../images/bg-body.png) repeat-y scroll left top;color:#888888;font-size:11px;height:100%;left:0;padding-left:9px;padding-right:0;padding-top:32px;position:fixed;top:0;width:220px;z-index:10;}#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:15px 15px 20px 0;padding:0;text-align:right;}
 #header a{color:#CCCCCC;}#header a:hover{color:#fff;text-decoration:none;}
 #header input[type="text"],#header select{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 #header select{font-size:13px;max-width:205px;padding:0;}
 #header input[type="text"]{font-size:11px;padding:2px 2px;width:120px;}
 #header h1{font-family:Calibri,Helvetica,Arial,sans-serif;color:#CCCCCC;font-weight:bold;margin:15px;text-align:right;z-index:50;}
-#main{background:none;margin:0 30px 0 250px;padding:40px 0 0 10px;}#main.nosidebar #content{border:1px solid #CCCCCC;}
+#main{background:none;margin:0 30px 0 250px;padding:70px 0 0 10px;}#main.nosidebar #content{border:1px solid #CCCCCC;}
 #content{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#FFFFFF none repeat scroll 0 0;border:1px solid #CCCCCC;margin:0 0 20px;width:81%;}
 #sidebar{width:15%;}
 #main-menu{font-family:Helvetica,Arial,sans-serif;margin:0;padding:0;position:relative;left:0;}#main-menu ul{margin-left:5px;}#main-menu ul li{float:none;list-style-type:none;margin:0;padding-bottom:10px;text-align:right;}#main-menu ul li a{-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;-webkit-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;border:none;color:#fff;cursor:pointer;display:block;font-size:14px;font-weight:normal;padding:10px 15px;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25),-2px 0 1px rgba(0, 0, 0, 0.25);}#main-menu ul li a:hover{-webkit-transition:padding-right 200ms linear;-moz-transition:padding-right 200ms linear;-ms-transition:padding-right 200ms linear;-o-transition:padding-right 200ms linear;transition:padding-right 200ms linear;padding-right:25px;}
@@ -239,7 +238,7 @@ dt.time-entry{background-image:url(../images/icons/clock.png);}
 #code-review-assign-link{margin-bottom:10px;}
 #project_quick_jump_box_chzn li{text-align:left;background-image:none;}
 body.stealth_on #header{background:none !important;}
-#sidebar_btn{background:transparent url(../images/menu-arrows.png) no-repeat scroll right -33px;cursor:w-resize;height:20px;margin:0;padding:0;position:absolute;right:10px;top:60px;width:13%;}
+#sidebar_btn{background:transparent url(../images/menu-arrows.png) no-repeat scroll right -33px;cursor:w-resize;height:20px;margin:0;padding:0;position:absolute;right:10px;top:59px;width:13%;}
 #main.nosidebar #sidebar_btn{background-position:left 5px;width:15px;}
 #sidebar{border-top:1px solid #dcdcdc;}
 .stopwatch-container{margin-top:5px;}.stopwatch-container #stopwatch{margin-right:10px;}
