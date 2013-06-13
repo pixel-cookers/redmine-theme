@@ -1,0 +1,48 @@
+/*---------- Colors ----------*/
+
+/* Links */
+a, a:link, a:visited, #sidebar a.selected { color: #0071BC }
+#footer a, #footer a:link, #footer a:visited { color: #0071BC }
+
+/* Top bar */
+#top-menu { background-color: #0071BC }
+
+/* Buttons */
+#main-menu ul li a { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
+#main-menu ul li a:hover { #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%)); }
+input[type="submit"], .btn {
+  #gradient > .vertical(saturate(lighten(#4e83ad, 2.5%), 10%), saturate(lighten(#226498, 2.5%), 10%));
+
+  &.greydient {
+    #gradient > .vertical(#FFFFFF, #E6E6E6);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  }
+}
+
+/* Boxes */
+fieldset#filters, fieldset#date-range { background-color: #F5FCFC }
+.box { background-color: #F5FCFC; }
+
+/* Redmine Favourite Projects */
+.chzn-container .chzn-results .highlighted {
+  background: saturate(lighten(#4e83ad, 2.5%), 10%);
+}
+
+/* == Colors change example ==
+
+a, a:link, a:visited { color: #cc0000 }
+#footer a, #footer a:link, #footer a:visited { color: #cc0000 }
+
+#top-menu { background-color: #cc0000}
+
+#main-menu ul li a { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
+#main-menu ul li a:hover { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
+input[type="submit"] { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
+
+fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
+.box { background-color:#FCF5FC; }
+
+*/
+
+@import url(width1024.less);
