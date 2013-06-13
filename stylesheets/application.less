@@ -11,11 +11,11 @@
 
 @topMenuHeight: 30px;
 @headerWidth: 50px;
-@headerWidthOpen: 221px;
+@headerWidthOpen: 220px;
 
 body {
   .lucida;
-  background: #F3F3F3 url(../images/bg-body.png) repeat-y scroll left top;
+  background: #F3F3F3;
   color: #555555;
 }
 #wrapper {
@@ -85,12 +85,13 @@ a {
 }
 
 #header {
-  background: transparent;
+  background: url(../images/bg-body.png) repeat-y scroll left top;
   color: #888888;
   font-size: 11px;
   height: 100%;
   left: 0;
   padding-left: 9px;
+  padding-right: 0;
   padding-top: @topMenuHeight+2px;
   position: absolute;
   top: 0;
@@ -125,7 +126,7 @@ a {
   }
   select {
     font-size: 13px;
-    max-width: 205px;
+    max-width: @headerWidthOpen - 15px;
     padding: 0;
   }
   input[type="text"] {
@@ -166,42 +167,16 @@ a {
   width: 15%;
 }
 
-#footer {
-  background-color: #EEEEEE;
-  border-top: 1px solid #CCCCCC;
-  clear: left;
-  color: #666666;
-  font-size: 9px;
-  margin: 40px 30px 0 255px;
-  padding: 15px 0;
-  text-align: left;
-
-  a {
-    color: #0071BC;
-
-    &:link, &:visited {
-      color: #0071BC;
-    }
-    &:hover {
-      color: #000;
-      text-decoration: none;
-    }
-  }
-  .bgr:after {
-    content: "| Theme by Pixel Cookers";
-  }
-}
-
 // Menu
 #main-menu {
   .helvetica;
   margin: 0;
   padding: 0;
   position: relative;
-  left: 5px;
+  left: 0;
 
   ul {
-    width: @headerWidthOpen - 5px;
+    margin-left: 5px;
 
     li {
       float: none;
@@ -240,6 +215,32 @@ a {
         }
       }
     }
+  }
+}
+
+#footer {
+  background-color: #EEEEEE;
+  border-top: 1px solid #CCCCCC;
+  clear: left;
+  color: #666666;
+  font-size: 9px;
+  margin: 40px 30px 0 @headerWidthOpen+40px;
+  padding: 15px 0;
+  text-align: left;
+
+  a {
+    color: #0071BC;
+
+    &:link, &:visited {
+      color: #0071BC;
+    }
+    &:hover {
+      color: #000;
+      text-decoration: none;
+    }
+  }
+  .bgr:after {
+    content: "| Theme by Pixel Cookers";
   }
 }
 
