@@ -1,0 +1,193 @@
+body {
+  background: #FEFEFE;
+}
+
+#wrapper3 {
+  background: url("../../images/rebrand/bg-body.png") no-repeat bottom right
+}
+
+/* Links */
+a, a:link, a:visited, #sidebar a.selected { color: #4396CE }
+#footer a, #footer a:link, #footer a:visited { color: #4396CE }
+
+/* Top bar */
+#top-menu {
+  .trebuchet;
+  background: #222 url("../../images/rebrand/mini-logo.png") no-repeat 20px center;
+  border-bottom: 6px solid #235F87;
+  font-size: 12px;
+  outline: none;
+
+  a {
+    color: #ddd;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  ul {
+    margin-left: 45px;
+    li {
+      text-transform: uppercase;
+    }
+  }
+
+  #loggedas {
+    a {
+      font-weight: bold;
+    }
+  }
+
+  #account {
+    ul {
+      margin-left: 0;
+      li {
+        text-transform: none;
+        a {
+          color: #aaa;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+#header {
+  background: url(../../images/rebrand/bg-sidebar.jpg) repeat-y scroll left top;
+
+  a {
+    color: #eee;
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  h1 {
+    .trebuchet;
+    color: #E0F2F9;
+    font-size: 24p;
+    margin: 15px 0;
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+
+    a {
+      color: #1D4E6D;
+      font-size: 14px;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
+  }
+}
+
+#content {
+  .box-shadow(0 0 10px rgba(0,0,0,0.1));
+  h2, #content .wiki h1 {
+    .trebuchet;
+    text-shadow: 0 1px 0 #fff;
+  }
+}
+
+#sidebar {
+  h3 {
+    .trebuchet;
+    border-bottom: 2px solid rgba(41, 94, 130, 0.2);
+    color: #295E82;
+    font-weight: bold;
+  }
+}
+
+#main-menu {
+  .trebuchet;
+
+  ul {
+    margin-left: -15px;
+
+    li {
+      margin: 0;
+      padding-bottom: 2px;
+      text-align: left;
+
+      a {
+        .border-radius(0);
+        .box-shadow(0 0 0 rgba(0,0,0,0.5));
+        .user-select(none);
+        background: rgba(255, 255, 255, 0.3);
+        font-size: 16px;
+        font-weight: normal;
+
+        &:hover {
+          .transition(padding-left 200ms linear);
+          background: rgba(15, 39, 55, 0.4);
+          padding-left: 25px;
+        }
+        &:active {
+          .box-shadow(0 0 0 rgba(0,0,0,0.5));
+        }
+        &.selected, &.selected:hover {
+          background: #FEFEFE;
+        }
+      }
+    }
+  }
+}
+
+#footer {
+  background: none;
+}
+
+/* Buttons */
+input[type="submit"], .btn {
+  #gradient > .vertical(saturate(darken(#4496ce, 2.5%), 10%), saturate(darken(#4f9cd2, 20%), 20%));
+
+  &:hover {
+    #gradient > .vertical(saturate(darken(#4496ce, 5%), 10%), saturate(darken(#4f9cd2, 23%), 20%));
+  }
+}
+
+/* Boxes */
+fieldset#filters, fieldset#date-range { background-color: #F5FFFF }
+.box { background-color: #F5FFFF; }
+
+/* Redmine Favourite Projects */
+.chzn-container .chzn-results .highlighted {
+  background: saturate(lighten(#4496ce, 2.5%), 10%);
+}
+
+.action-login {
+  background: url(../../images/rebrand/bg-sidebar.jpg) repeat scroll left top;
+
+  #header {
+    background: none;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  #main.nosidebar #content {
+    .box-shadow(0 0 0 rgba(0,0,0,0.5));
+    background: none;
+    border: none;
+  }
+
+  #login-form {
+    background: url("../../images/rebrand/login.png") no-repeat center top;
+    border: none;
+    color: #666;
+  }
+
+  #wrapper3 {
+    background: none;
+  }
+}
+
+body.stealth_on #top-menu {
+  background: #222 url("../../images/rebrand/mini-logo.png") no-repeat 20px center !important;
+}
+
+body.stealth_on #header {
+  background: url(../../images/rebrand/bg-sidebar-stealth.jpg) repeat scroll left top !important;
+}
