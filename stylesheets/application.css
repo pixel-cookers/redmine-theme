@@ -26,7 +26,7 @@ a{color:#0071BC;}a:hover{text-decoration:underline;}
 a:hover,a:active{color:#2A5685;}
 a:link,a:visited{color:#0071BC;}
 a.issue.closed,a.issue.closed:link,a.issue.closed:visited{color:#999;}
-#top-menu{background:#0071BC;border-bottom:1px solid #858586;font-size:11px;height:30px;outline:1px solid #3b3a3b;padding:0;position:fixed;width:100%;z-index:20;}#top-menu a{color:#DEDEDE;font-weight:normal;padding:4px 5px;}#top-menu a:hover{color:#fff;text-decoration:none;}
+#top-menu{background:#0071BC;border-bottom:1px solid #858586;font-size:11px;height:30px;outline:1px solid #3b3a3b;padding:0;position:fixed;width:100%;z-index:20;}#top-menu a{color:#DEDEDE;font-weight:normal;padding:9px 5px;}#top-menu a:hover{color:#fff;text-decoration:none;}
 #top-menu ul{padding:0 21px;}#top-menu ul li{background:none;color:#ddd;line-height:30px;margin-right:4px;}
 #top-menu #loggedas{color:#efefef;height:30px;line-height:30px;margin:0;}#top-menu #loggedas a{padding:0;}
 #header{background:url(../images/bg-body.png) repeat-y scroll left top;color:#888888;font-size:11px;height:100%;left:0;padding-left:9px;padding-right:0;padding-top:32px;position:fixed;top:0;width:220px;z-index:10;}#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:15px 15px 20px 0;padding:0;text-align:right;}
