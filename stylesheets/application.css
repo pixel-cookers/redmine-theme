@@ -29,19 +29,20 @@ a.issue.closed,a.issue.closed:link,a.issue.closed:visited{color:#999;}
 #top-menu{background:#0071BC;border-bottom:1px solid #858586;font-size:11px;height:30px;outline:1px solid #3b3a3b;padding:0;position:fixed;width:100%;z-index:20;}#top-menu a{color:#DEDEDE;font-weight:normal;padding:4px 5px;}#top-menu a:hover{color:#fff;text-decoration:none;}
 #top-menu ul{padding:0 21px;}#top-menu ul li{background:none;color:#ddd;line-height:30px;margin-right:4px;}
 #top-menu #loggedas{color:#efefef;height:30px;line-height:30px;margin:0;}#top-menu #loggedas a{padding:0;}
-#header{background:url(../images/bg-body.png) repeat-y scroll left top;color:#888888;font-size:11px;height:100%;left:0;padding-left:9px;padding-right:0;padding-top:32px;position:fixed;top:0;width:220px;z-index:10;}#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:15px 15px 20px 0;padding:0;text-align:right;}
+#header{background:url(../images/bg-body.png) repeat-y scroll left top;color:#888888;font-size:11px;height:100%;left:-180px;padding-left:9px;padding-right:0;padding-top:32px;position:fixed;top:0;width:220px;z-index:10;}#header:hover{-webkit-transition:left 100ms linear;-moz-transition:left 100ms linear;-ms-transition:left 100ms linear;-o-transition:left 100ms linear;transition:left 100ms linear;-webkit-box-shadow:0 0 10px rgba(0, 0, 0, 0.7);-moz-box-shadow:0 0 10px rgba(0, 0, 0, 0.7);box-shadow:0 0 10px rgba(0, 0, 0, 0.7);left:0;}
+#header #quick-search{font-family:Arial,Helvetica,sans-serif;line-height:30px;margin:15px 15px 20px 0;padding:0;text-align:right;}
 #header a{color:#CCCCCC;}#header a:hover{color:#fff;text-decoration:none;}
 #header input[type="text"],#header select{-webkit-border-radius:0;-moz-border-radius:0;border-radius:0;}
 #header select{font-size:13px;max-width:205px;padding:0;}
 #header input[type="text"]{font-size:11px;padding:2px 2px;width:120px;}
 #header h1{font-family:Calibri,Helvetica,Arial,sans-serif;color:#CCCCCC;font-weight:bold;margin:15px;text-align:right;z-index:50;}
-#main{background:none;margin:0 30px 0 250px;padding:70px 0 0 10px;}#main.nosidebar #content{border:1px solid #CCCCCC;}
+#main{background:none;margin:0 30px 0 70px;padding:70px 0 0 10px;}#main.nosidebar #content{border:1px solid #CCCCCC;}
 #content{-webkit-border-radius:6px;-moz-border-radius:6px;border-radius:6px;background:#FFFFFF none repeat scroll 0 0;border:1px solid #CCCCCC;margin:0 0 20px;width:81%;}
 #sidebar{width:15%;}
-#main-menu{font-family:Helvetica,Arial,sans-serif;margin:0;padding:0;position:relative;left:0;}#main-menu ul{margin-left:5px;}#main-menu ul li{float:none;list-style-type:none;margin:0;padding-bottom:10px;text-align:right;}#main-menu ul li a{-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;-webkit-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;border:none;color:#fff;cursor:pointer;display:block;font-size:14px;font-weight:normal;padding:10px 15px;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25),-2px 0 1px rgba(0, 0, 0, 0.25);}#main-menu ul li a:hover{-webkit-transition:padding-right 200ms linear;-moz-transition:padding-right 200ms linear;-ms-transition:padding-right 200ms linear;-o-transition:padding-right 200ms linear;transition:padding-right 200ms linear;padding-right:25px;}
+#main-menu{font-family:Helvetica,Arial,sans-serif;margin:0;padding:0;position:relative;left:0;}#main-menu ul{margin-left:5px;}#main-menu ul li{float:none;list-style-type:none;margin:0;padding-bottom:10px;text-align:left;}#main-menu ul li a{-webkit-border-radius:5px 0 0 5px;-moz-border-radius:5px 0 0 5px;border-radius:5px 0 0 5px;-webkit-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:-2px 1px 2px rgba(0, 0, 0, 0.5);-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;-o-user-select:none;user-select:none;border:none;color:#fff;cursor:pointer;display:block;font-size:14px;font-weight:normal;padding:10px 15px;text-shadow:0 -1px 1px rgba(0, 0, 0, 0.25),-2px 0 1px rgba(0, 0, 0, 0.25);}#main-menu ul li a:hover{-webkit-transition:padding-left 200ms linear;-moz-transition:padding-left 200ms linear;-ms-transition:padding-left 200ms linear;-o-transition:padding-left 200ms linear;transition:padding-left 200ms linear;padding-left:25px;}
 #main-menu ul li a:active{-webkit-box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);-moz-box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);box-shadow:inset 2px 1px 2px rgba(0, 0, 0, 0.5);border-bottom:0\9;border-top:1px solid #666\9;}
 #main-menu ul li a.selected,#main-menu ul li a.selected:hover{background:#f3f3f3;color:#333333;font-weight:bold;text-shadow:none;}
-#footer{background-color:#EEEEEE;border-top:1px solid #CCCCCC;clear:left;color:#666666;font-size:9px;margin:40px 30px 0 260px;padding:15px 0;text-align:left;}#footer a{color:#0071BC;}#footer a:link,#footer a:visited{color:#0071BC;}
+#footer{background-color:#EEEEEE;border-top:1px solid #CCCCCC;clear:left;color:#666666;font-size:9px;margin:40px 30px 0 80px;padding:15px 0;text-align:left;}#footer a{color:#0071BC;}#footer a:link,#footer a:visited{color:#0071BC;}
 #footer a:hover{color:#000;text-decoration:none;}
 #footer .bgr:after{content:"| Theme by Pixel Cookers";}
 #content h2,#content .wiki h1{background-color:#e6e6e6;background-image:-moz-linear-gradient(top, #ececec, #dedede);background-image:-ms-linear-gradient(top, #ececec, #dedede);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ececec), to(#dedede));background-image:-webkit-linear-gradient(top, #ececec, #dedede);background-image:-o-linear-gradient(top, #ececec, #dedede);background-image:linear-gradient(top, #ececec, #dedede);background-repeat:repeat-x;filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ececec', endColorstr='#dedede', GradientType=0);border-bottom:1px solid #CCCCCC;color:#000;font-size:17px;padding:10px 15px;margin-bottom:10px;margin-left:-10px;margin-right:-10px;}#content h2:first-of-type,#content .wiki h1:first-of-type{-webkit-border-radius:6px 6px 0 0;-moz-border-radius:6px 6px 0 0;border-radius:6px 6px 0 0;height:23px;margin-top:-5px;}
@@ -242,6 +243,22 @@ dt.document{background-image:url(../images/icons/document.png);}
 dt.project{background-image:url(../images/icons/block.png);}
 dt.time-entry{background-image:url(../images/icons/clock.png);}
 #search-results dt.issue.closed{background-image:url(../images/icons/ticket--arrow.png);}
+@font-face{font-family:'FontAwesome';src:url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.eot?v=3.2.0');src:url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.woff?v=3.2.0') format('woff'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.ttf?v=3.2.0') format('truetype'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0') format('svg');font-weight:normal;font-style:normal;}#main-menu ul li a:after{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;float:right;margin-top:-5px;font-size:24px;}
+#main-menu ul li a.overview:after{content:"\f0e4";}
+#main-menu ul li a.activity:after{content:"\f018";}
+#main-menu ul li a.roadmap:after{content:"\f187";}
+#main-menu ul li a.issues:after{content:"\f145";}
+#main-menu ul li a.new-issue:after{content:"\f188";}
+#main-menu ul li a.gantt:after{content:"\f0ae";}
+#main-menu ul li a.calendar:after{content:"\f073";}
+#main-menu ul li a.news:after{content:"\f02d";}
+#main-menu ul li a.documents:after{content:"\f15b";}
+#main-menu ul li a.wiki:after{content:"\f036";}
+#main-menu ul li a.files:after{content:"\f07c";}
+#main-menu ul li a.redmine-embedded:after{content:"\f108";}
+#main-menu ul li a.redmine-monitoring-controlling:after{content:"\f080";}
+#main-menu ul li a.tab:after{content:"\f0a3";}
+#main-menu ul li a.settings:after{content:"\f0ad";}
 a,a:link,a:visited,#sidebar a.selected{color:#0071bc;}
 #footer a,#footer a:link,#footer a:visited{color:#0071bc;}
 #top-menu{background-color:#0071bc;}

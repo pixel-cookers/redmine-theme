@@ -10,8 +10,8 @@
 // Variables
 
 @topMenuHeight: 30px;
-@headerWidth: 50px;
-@headerWidthOpen: 220px;
+@headerWidth: 220px;
+@headerWidthHidden: 40px;
 
 body {
   .lucida;
@@ -90,19 +90,20 @@ a {
   color: #888888;
   font-size: 11px;
   height: 100%;
-  left: 0;
+  left: -(@headerWidth - @headerWidthHidden);
   padding-left: 9px;
   padding-right: 0;
   padding-top: @topMenuHeight+2px;
   position: fixed;
   top: 0;
-  width: @headerWidthOpen;
+  width: @headerWidth;
   z-index: 10;
 
-//  &:hover {
-//    .transition(width 200ms linear);
-//    width: @headerWidthOpen;
-//  }
+  &:hover {
+    .transition(left 100ms linear);
+    .box-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+    left: 0;
+  }
 
   #quick-search {
     .arial;
@@ -123,7 +124,7 @@ a {
   }
   select {
     font-size: 13px;
-    max-width: @headerWidthOpen - 15px;
+    max-width: @headerWidth - 15px;
     padding: 0;
   }
   input[type="text"] {
@@ -144,7 +145,7 @@ a {
 
 #main {
   background: none;
-  margin: 0 30px 0 @headerWidthOpen+30px;
+  margin: 0 30px 0 @headerWidthHidden+30px;
   padding: @topMenuHeight+40px 0 0 10px;
 
   &.nosidebar #content {
@@ -180,7 +181,7 @@ a {
       list-style-type: none;
       margin: 0;
       padding-bottom: 10px;
-      text-align: right;
+      text-align: left;
 
       a {
         .border-radius(5px 0 0 5px);
@@ -196,8 +197,8 @@ a {
         text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
 
         &:hover {
-          .transition(padding-right 200ms linear);
-          padding-right: 25px;
+          .transition(padding-left 200ms linear);
+          padding-left: 25px;
         }
         &:active {
           .box-shadow(inset 2px 1px 2px rgba(0,0,0,0.5));
@@ -221,7 +222,7 @@ a {
   clear: left;
   color: #666666;
   font-size: 9px;
-  margin: 40px 30px 0 @headerWidthOpen+40px;
+  margin: 40px 30px 0 @headerWidthHidden+40px;
   padding: 15px 0;
   text-align: left;
 
