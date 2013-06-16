@@ -144,10 +144,16 @@ a, a:link, a:visited, #sidebar a.selected { color: #4396CE }
 
 /* Buttons */
 input[type="submit"], .btn {
-  #gradient > .vertical(saturate(darken(#4496ce, 2.5%), 10%), saturate(darken(#4f9cd2, 20%), 20%));
+  #gradient > .vertical(#444444, #2D2D2D);
 
   &:hover {
-    #gradient > .vertical(saturate(darken(#4496ce, 5%), 10%), saturate(darken(#4f9cd2, 23%), 20%));
+    #gradient > .vertical(darken(#444444, 5%), darken(#2D2D2D, 5%));
+  }
+
+  &.greydient {
+    #gradient > .vertical(#FFFFFF, #E6E6E6);
+    color: #333 !important;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   }
 }
 
