@@ -276,5 +276,5 @@ fieldset#filters,fieldset#date-range{background-color:#f5ffff;}
 .action-login #main.nosidebar #content{-webkit-box-shadow:0 0 0 rgba(0, 0, 0, 0.5);-moz-box-shadow:0 0 0 rgba(0, 0, 0, 0.5);box-shadow:0 0 0 rgba(0, 0, 0, 0.5);background:none;border:none;}
 .action-login #login-form{background:url("rebrand/../../images/rebrand/login.png") no-repeat center top;border:none;color:#666;}
 .action-login #wrapper3{background:none;}
-body.stealth_on #top-menu{background:#222222 url("rebrand/../../images/rebrand/mini-logo.png") no-repeat 20px center !important;}
+body.stealth_on #top-menu{background:#222 !important;}
 body.stealth_on #header{background:url(rebrand/../../images/rebrand/bg-sidebar-stealth.jpg) repeat scroll left top !important;}
