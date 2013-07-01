@@ -243,22 +243,25 @@ dt.document{background-image:url(../images/icons/document.png);}
 dt.project{background-image:url(../images/icons/block.png);}
 dt.time-entry{background-image:url(../images/icons/clock.png);}
 #search-results dt.issue.closed{background-image:url(../images/icons/ticket--arrow.png);}
-@font-face{font-family:'FontAwesome';src:url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.eot?v=3.2.0');src:url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.woff?v=3.2.0') format('woff'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.ttf?v=3.2.0') format('truetype'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0') format('svg');font-weight:normal;font-style:normal;}#main-menu ul li a:after{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;float:right;margin-top:-5px;font-size:24px;}
-#main-menu ul li a.overview:after{content:"\f0e4";}
-#main-menu ul li a.activity:after{content:"\f018";}
-#main-menu ul li a.roadmap:after{content:"\f187";}
-#main-menu ul li a.issues:after{content:"\f145";}
-#main-menu ul li a.new-issue:after{content:"\f188";}
-#main-menu ul li a.gantt:after{content:"\f0ae";}
-#main-menu ul li a.calendar:after{content:"\f073";}
-#main-menu ul li a.news:after{content:"\f02d";}
-#main-menu ul li a.documents:after{content:"\f15b";}
-#main-menu ul li a.wiki:after{content:"\f036";}
-#main-menu ul li a.files:after{content:"\f07c";}
-#main-menu ul li a.redmine-embedded:after{content:"\f108";}
-#main-menu ul li a.redmine-monitoring-controlling:after{content:"\f080";}
-#main-menu ul li a.tab:after{content:"\f0a3";}
-#main-menu ul li a.settings:after{content:"\f0ad";}
+@font-face{font-family:'FontAwesome';src:url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.eot?v=3.2.0');src:url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.eot?#iefix&v=3.2.0') format('embedded-opentype'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.woff?v=3.2.0') format('woff'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.ttf?v=3.2.0') format('truetype'),url('//netdna.bootstrapcdn.com/font-awesome/3.2.0/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.0') format('svg');font-weight:normal;font-style:normal;}#main-menu ul li a:before{font-family:FontAwesome;font-weight:normal;font-style:normal;text-decoration:inherit;-webkit-font-smoothing:antialiased;*margin-right:.3em;float:right;margin-top:-5px;font-size:24px;}
+#main-menu ul li a.overview:before{content:"\f0e4";}
+#main-menu ul li a.activity:before{content:"\f018";}
+#main-menu ul li a.roadmap:before{content:"\f187";}
+#main-menu ul li a.issues:before{content:"\f145";}
+#main-menu ul li a.new-issue:before{content:"\f188";}
+#main-menu ul li a.gantt:before{content:"\f0ae";}
+#main-menu ul li a.calendar:before{content:"\f073";}
+#main-menu ul li a.news:before{content:"\f02d";}
+#main-menu ul li a.documents:before{content:"\f15b";}
+#main-menu ul li a.wiki:before{content:"\f036";}
+#main-menu ul li a.boards:before{content:"\f075";}
+#main-menu ul li a.files:before{content:"\f07c";}
+#main-menu ul li a.redmine-embedded:before{content:"\f108";}
+#main-menu ul li a.redmine-monitoring-controlling:before{content:"\f080";}
+#main-menu ul li a.tab:before{content:"\f0a3";}
+#main-menu ul li a.repository:before{content:"\f0b1";}
+#main-menu ul li a.code-review:before{content:"\f121";}
+#main-menu ul li a.settings:before{content:"\f0ad";}
 a,a:link,a:visited,#sidebar a.selected{color:#0071bc;}
 #footer a,#footer a:link,#footer a:visited{color:#0071bc;}
 #top-menu{background-color:#0071bc;}
