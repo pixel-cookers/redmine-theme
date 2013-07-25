@@ -98,13 +98,7 @@
 			}
 
 			$('.controller-issues.action-show #issue-form input[type="submit"], .controller-timelog .edit_time_entry input[type="submit"], .controller-timelog .new_time_entry input[type="submit"]').on('click', function(){
-				window.onbeforeunload = function (e) {
-					var e = e || window.event;
-					if (e) {
-						e.returnValue = null;
-					}
-					return null;
-				};
+				window.onbeforeunload = null;
 			});
 		}
 
