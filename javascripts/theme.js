@@ -78,14 +78,6 @@
 					$(this).attr('value', 'Play').html('Play');
 				}
 
-				window.onbeforeunload = function (e) {
-					var e = e || window.event;
-					if (e) {
-						e.returnValue = 'You are running a timer.';
-					}
-					return 'You are running a timer.';
-				};
-
 				return false;
 			});
 
