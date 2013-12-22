@@ -5,7 +5,7 @@
  */
 (function($, document, undefined) {
 	$(document).ready(function() {
-		var fg = {
+		var cfg = {
 			"password.enabled": false,
 			"password.length": 7,
 			"password.special": false,
