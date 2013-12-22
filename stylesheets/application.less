@@ -160,6 +160,7 @@ a {
   background: #FFFFFF none repeat scroll 0 0;
   border: 1px solid #CCCCCC;
   margin: 0 0 20px;
+  position: relative;
   width: 81%;
 }
 
@@ -765,7 +766,7 @@ tr.message.sticky td.subject {
   margin: 0;
   padding: 0;
   position: absolute;
-  right: 10px;
+  right: 0;
   top: @topMenuHeight+29px;
   width: 13%;
 }
@@ -785,6 +786,7 @@ tr.message.sticky td.subject {
 }
 
 // Plugins
+@import url(plugins/banner.less);
 @import url(plugins/codereview.less);
 @import url(plugins/redmine_favourite_projects.less);
 @import url(plugins/redmine_stealth.less);
