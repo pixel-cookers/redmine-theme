@@ -5,7 +5,8 @@
  */
 (function($, document, undefined) {
 	$(document).ready(function() {
-		var cfg = {
+		var fg = {
+			"password.enabled": false,
 			"password.length": 7,
 			"password.special": false,
 			"stopwatch.enabled": true,
@@ -29,32 +30,33 @@
 		injectViewportMetaTag();
 		injectAppleTouchIcons();
 
-		// Password generation in user creation
-		var genContainer = $(document.createElement('p'));
-		var genLabel = $(document.createElement('label'));
-		var genBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'generate-password').attr('class', "btn greydient").text('Generate password');
-		var useBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'use-password').attr('class', "btn greydient").text('Use password');
-		var passFields = $('.controller-users.action-new #password_fields, .controller-users.action-create #password_fields, .controller-users.action-edit #password_fields');
+		if(cfg['password.enabled']) {
+			// Password generation in user creation
+			var genContainer = $(document.createElement('p'));
+			var genLabel = $(document.createElement('label'));
+			var genBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'generate-password').attr('class', "btn greydient").text('Generate password');
+			var useBtn = $(document.createElement('button')).attr('type', 'button').attr('id', 'use-password').attr('class', "btn greydient").text('Use password');
+			var passFields = $('.controller-users.action-new #password_fields, .controller-users.action-create #password_fields, .controller-users.action-edit #password_fields');
 
-		passFields.append(genContainer);
-		genContainer.append(genLabel).append(genBtn).append(useBtn);
-		useBtn.hide();
+			passFields.append(genContainer);
+			genContainer.append(genLabel).append(genBtn).append(useBtn);
+			useBtn.hide();
 
+			genBtn.on('click', function(){
+				var password = $.password(cfg['password.length'],cfg['password.special']);
+				var info = passFields.find('.info');
+				useBtn.fadeIn().attr('attr-value', password);
+				info.html('Password generated : '+password);
+				$('#user_password, #user_password_confirmation').val('');
+				return false;
+			});
 
-		genBtn.on('click', function(){
-			var password = $.password(cfg['password.length'],cfg['password.special']);
-			var info = passFields.find('.info');
-			useBtn.fadeIn().attr('attr-value', password);
-			info.html('Password generated : '+password);
-			$('#user_password, #user_password_confirmation').val('');
-			return false;
-		});
-
-		useBtn.on('click', function(){
-			$('#user_password, #user_password_confirmation').val($(this).attr('attr-value'));
-			$(this).fadeOut();
-			return false;
-		});
+			useBtn.on('click', function(){
+				$('#user_password, #user_password_confirmation').val($(this).attr('attr-value'));
+				$(this).fadeOut();
+				return false;
+			});
+		}
 
 		if(cfg['stopwatch.enabled']) {
 			var stopwatchContainer = $(document.createElement('div')).attr('class', 'stopwatch-container');
