@@ -1537,6 +1537,13 @@ a:visited,
 #sidebar h3 {
   color: #295E82;
 }
+/* Login */
+.action-login #main.nosidebar #content {
+  background: #222222;
+}
+#login-form label {
+  color: #ccc;
+}
 /* Buttons */
 input[type="submit"],
 .btn {
