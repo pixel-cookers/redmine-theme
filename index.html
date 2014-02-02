@@ -8,18 +8,19 @@
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <!-- Le styles -->
-    <link href='http://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet/less" href="less/bootstrap.less">
+    <link rel="stylesheet/less" href="less/responsive.less">
     <link rel="stylesheet/less" href="less/style.less">
     <link rel="stylesheet" href="js/colorbox/colorbox.css">
 
     <script src="js/less.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <script src="js/bootstrap-scrollspy.js"></script>
     <script src="js/colorbox/jquery.colorbox-min.js"></script>
     <script src="js/script.js"></script>
@@ -29,7 +30,7 @@
 </head>
 
 <body data-spy="scroll" data-target=".navbar-fixed-top">
-<a href="https://github.com/pixel-cookers/redmine-theme"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+<a href="https://github.com/pixel-cookers/redmine-theme"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 100" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
 
 <div class="navbar navbar-fixed-top navbar-inverse" style="display: none;">
     <div class="navbar-inner">
@@ -73,7 +74,7 @@
             </div>
             <div class="span4">
                 <h3>Compatibility</h3>
-                <p>This theme is compatible with the latest Redmine version <span class="label label-info">v2.2.x</span>. It is tested and supported in major modern browsers like Chrome, Safari, Internet Explorer, and Firefox. For <span class="label label-info">older versions</span>, please check changelog and <a href="https://github.com/pixel-cookers/redmine-theme/tags">github tags</a>.</p>
+                <p>This theme is compatible with the latest Redmine version <span class="label label-info">v2.4.x</span>. It is tested and supported in major modern browsers like Chrome, Safari, Internet Explorer, and Firefox. For <span class="label label-info">older versions</span>, please check changelog and <a href="https://github.com/pixel-cookers/redmine-theme/tags">github tags</a>.</p>
                 <img src="images/browser_logos-32.png" alt="Tested and supported in Chrome, Safari, Internet Explorer, and Firefox">
                 <ul>
                     <li>Latest Safari</li>
@@ -92,11 +93,12 @@
                     <li><a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a></li>
                     <li><a href="http://mgeraci.github.com/Less-Boilerplate/">Less Boilterplate</a></li>
                 </ul>
-                <h3>Plugin compatibility</h3>
+                <h3>Plugin styling</h3>
                 <ul>
                     <li><a href="http://www.redmine.org/plugins/codereview">Redmine Code Review Plugin</a></li>
                     <li><a href="http://www.redmine.org/plugins/redmine_favourite_projects">Redmine Favourite Projects</a></li>
                     <li><a href="http://www.redmine.org/projects/redmine/wiki/PluginRedmineStealth">Redmine Stealth Plugin</a></li>
+                    <li><a href="http://www.redmine.org/plugins/banner">Redmine Banner Plugin</a></li>
                 </ul>
             </div>
         </div>
@@ -113,40 +115,40 @@
             <div class="span12">
                 <ul class="thumbnails">
                     <li class="span3">
-                        <a class="thumbnail" href="images/0008.jpg">
-                            <img src="images/th0008.png" alt="">
+                        <a class="thumbnail" href="images/01.png">
+                            <img src="images/01.png" alt="">
                             <span class="magnifier"></span>
                         </a>
                     </li>
                     <li class="span3">
-                        <a class="thumbnail" href="images/0009.jpg">
-                            <img src="images/th0009.png" alt="">
+                        <a class="thumbnail" href="images/02.png">
+                            <img src="images/02.png" alt="">
                             <span class="magnifier"></span>
                         </a>
                     </li>
                     <li class="span3">
-                        <a class="thumbnail" href="images/0010.jpg">
-                            <img src="images/th0010.png" alt="">
+                        <a class="thumbnail" href="images/03.png">
+                            <img src="images/03.png" alt="">
                             <span class="magnifier"></span>
                         </a>
                     </li>
                     <li class="span3">
-                        <a class="thumbnail" href="images/0012.jpg">
-                            <img src="images/th0012.png" alt="">
+                        <a class="thumbnail" href="images/04.png">
+                            <img src="images/04.png" alt="">
                             <span class="magnifier"></span>
                         </a>
                     </li>
                     <li class="span3">
                     </li>
                     <li class="span3">
-                        <a class="thumbnail" href="images/0013.png">
-                            <img src="images/th0013.png" alt="">
+                        <a class="thumbnail" href="images/05.png">
+                            <img src="images/05.png" alt="">
                             <span class="magnifier"></span>
                         </a>
                     </li>
                     <li class="span3">
-                        <a class="thumbnail" href="images/0014.png">
-                            <img src="images/th0014.png" alt="">
+                        <a class="thumbnail" href="images/06.png">
+                            <img src="images/06.png" alt="">
                             <span class="magnifier"></span>
                         </a>
                     </li>
@@ -201,13 +203,21 @@
                 <p>There are some configurations you can do to make this theme your own.</p>
                 <h2>Colors</h2>
                 <ol>
-                    <li>At the end of <code>stylesheets/application.less</code> you will find the piece of code below.</li>
-                    <li>Uncomment it, and put the colors you want.</li>
-                    <li>Recompile the file with <a href="http://winless.org/">WinLess</a></li>
+                    <li>At the beginning of <code>colors.less</code> you will find all color variables.</li>
+                    <li>Modify it, and put the colors you want.</li>
+                    <li>Recompile the file with <code>grunt</code>. You will need to run <code>npm install</code> before using grunt.</li>
                 </ol>
 
-                <script src="https://gist.github.com/lmeyer/5499456.js?file=application.less"></script>
-                <h2>Stopwath / Password generator</h2>
+                <script src="https://gist.github.com/lmeyer/5499456.js?file=colors.less"></script>
+
+                <h2>Branding</h2>
+                <ol>
+                    <li>At the end of <code>application.less</code>, uncomment the last line.</li>
+                    <li>Look at the images folder and put your logos, change the <code>pixel-cookers.less</code> file to fit your needs.</li>
+                    <li>Recompile the file with <code>grunt</code>. You will need to run <code>npm install</code> before using grunt.</li>
+                </ol>
+
+                <h2>Stopwath</h2>
 
                 <p>
                     You can find the following configurations in <code>javascripts/theme.js</code>.
@@ -226,6 +236,16 @@
         <div class="row">
             <div class="span12">
                 <dl>
+                    <dt>v3.0 (Redmine v2.4.x compatible) <span class="label label-info">Major realease</span></dt>
+                    <dd>Complete redesign</dd>
+                    <dd>Grunt is used for less compilation</dd>
+                    <dd>Less images, more css3</dd>
+                    <dd>Password generator remove since redmine include once</dd>
+                    <dd>Add compatibility with <a href="http://www.redmine.org/plugins/banner">Redmine Banner Plugin</a></dd>
+                    <dd>Vertical scroll added to the left panel (thanks to <a href="https://github.com/dbarabash">dbarabash</a>)</dd>
+                    <dd>Almost all colors are in colors.less and are in variables</dd>
+                    <dd>Better way to brand the theme</dd>
+                    <dd>Bug fixes and small improvements</dd>
                     <dt>v2.2</dt>
                     <dd>Stopwatch improvements</dd>
                     <dd>List style modified</dd>
