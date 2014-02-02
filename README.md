@@ -10,3 +10,5 @@ Pixel Cookers Redmine Theme
 ### Install instructions :
 
 Please follow the install instructions here : http://pixel-cookers.github.com/redmine-theme/
+
+[![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
