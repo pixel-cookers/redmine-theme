@@ -1,89 +1,93 @@
 /*---------- Colors ----------*/
 
+@linkColor: #4396CE;
+
+@topMenuBackground: #222;
+@topMenuBorderColor: #235F87;
+@topMenuLinkColor: #DDD;
+@topMenuLinkColorHover: #FFF;
+
+@headerBackground: #4496CE;
+@headerLinkColor: #EEE;
+@headerLinkColorHover: #FFF;
+@headerTitleColor: #E0F2F9;
+@headerTitleLinkColor: #1D4E6D;
+
+@sidebarTitleColor:  #295E82;
+
+@loginBackground: #222;
+@loginLabelColor: #CCC;
+
+@buttonBackground: #444;
+@buttonBackgroundLight: #FFF;
+
+@boxesBackground: #F5FFFF;
+
 /* Links */
-a, a:link, a:visited, #sidebar a.selected { color: #4396CE }
-#footer a, #footer a:link, #footer a:visited { color: #4396CE }
+a, a:link, a:visited, #sidebar a.selected { color: @linkColor }
+#footer a, #footer a:link, #footer a:visited { color: @linkColor }
 /* Top bar */
 #top-menu {
-  background: #222;
-  border-bottom: @topMenuBorder solid #235F87;
+  background: @topMenuBackground;
+  border-bottom: @topMenuBorder solid @topMenuBorderColor;
 
   a {
-    color: #ddd;
+    color: @topMenuLinkColor;
     &:hover {
-      color: #fff;
+      color: @topMenuLinkColorHover;
     }
   }
 }
 
 #header {
-  background: #4496CE;
-  color: #888888;
+  background: @headerBackground;
 
   a {
-    color: #eee;
+    color: @headerLinkColor;
     &:hover {
-      color: #fff;
+      color: @headerLinkColorHover;
     }
   }
 
   h1 {
-    color: #E0F2F9;
+    color: @headerTitleColor;
     a {
-      color: #1D4E6D;
+      color: @headerTitleLinkColor;
     }
   }
 }
 
 #sidebar {
   h3 {
-    color: #295E82;
+    color: @sidebarTitleColor;
   }
 }
 
 /* Login */
 
-.action-login #main.nosidebar #content { background: #222 }
-#login-form label { color: #ccc; }
+.action-login #main.nosidebar #content { background: @loginBackground }
+#login-form label { color: @loginLabelColor; }
 
 /* Buttons */
-//#main-menu ul li a:hover { background: rgba(15, 39, 55, 0.4); }
 input[type="submit"], .btn {
-  #gradient > .vertical(#444444, #2D2D2D);
+  #gradient > .vertical(@buttonBackground, darken(@buttonBackground, 10%));
 
   &:hover {
-    #gradient > .vertical(darken(#444444, 5%), darken(#2D2D2D, 5%));
+    #gradient > .vertical(darken(@buttonBackground, 5%), darken(@buttonBackground, 15%));
   }
 
   &.greydient {
-    #gradient > .vertical(#FFFFFF, #E6E6E6);
+    #gradient > .vertical(@buttonBackgroundLight, darken(@buttonBackgroundLight, 10%));
     color: #333 !important;
     text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   }
 }
 
 /* Boxes */
-fieldset#filters, fieldset#date-range { background-color: #F5FFFF }
-.box { background-color: #F5FFFF; }
+fieldset#filters, fieldset#date-range { background-color: @boxesBackground }
+.box { background-color: @boxesBackground; }
 
 /* Redmine Favourite Projects */
 .chzn-container .chzn-results .highlighted {
-  background: saturate(lighten(#4496ce, 2.5%), 10%);
+  background: saturate(lighten(@headerBackground, 2.5%), 10%);
 }
-
-
-/* == Colors change example ==
-
-a, a:link, a:visited { color: #cc0000 }
-#footer a, #footer a:link, #footer a:visited { color: #cc0000 }
-
-#top-menu { background-color: #cc0000}
-
-#main-menu ul li a { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
-#main-menu ul li a:hover { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
-input[type="submit"] { #gradient > .vertical(lighten(#cc0000, 5%), darken(#cc0000, 2.5%)); }
-
-fieldset#filters, fieldset#date-range { background-color: #FCF5FC }
-.box { background-color:#FCF5FC; }
-
-*/
