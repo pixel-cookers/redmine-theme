@@ -1,0 +1,21 @@
+{
+    "name": "redmine-theme",
+    "version": "3.0.0",
+    "author": {
+        "name": "Ludovic Meyer",
+        "email": "ludovic.meyer@pixel-cookers.com",
+        "url": "http://www.pixel-cookers.com"
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "load-grunt-tasks": "~0.2.0",
+        "time-grunt": "~0.2.5",
+        "grunt-contrib-watch": "~0.5.3",
+        "grunt-contrib-less": "~0.8.3"
+    },
+    "engines": {
+        "node": ">=0.8.0"
+    }
+}

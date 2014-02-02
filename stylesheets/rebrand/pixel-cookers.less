@@ -1,0 +1,54 @@
+#wrapper3 {
+  background: url("../images/rebrand/bg-body.png") no-repeat bottom right
+}
+
+/* Top bar */
+#top-menu {
+  ul {
+    li {
+      .home {
+        background: url("../images/rebrand/mini-logo.png") no-repeat center center;
+        color: transparent;
+      }
+    }
+  }
+}
+
+#header {
+  background: url("../images/rebrand/bg-sidebar.jpg") repeat-y scroll left top;
+
+  &:hover {
+    //.box-shadow(0 0 10px rgba(0, 0, 0, 0.7));
+  }
+}
+
+.action-login {
+  background: url("../images/rebrand/bg-sidebar.jpg") repeat scroll left top;
+
+  #header {
+    background: none;
+  }
+
+  #footer {
+    display: none;
+  }
+
+  #main.nosidebar #content {
+    .box-shadow(0 0 0 rgba(0,0,0,0.5));
+    background: none;
+    border: none;
+  }
+
+  #login-form {
+    background: url("../images/rebrand/login.png") no-repeat center top;
+    color: #666;
+  }
+
+  #wrapper3 {
+    background: none;
+  }
+}
+
+body.stealth_on #header {
+  background: url("../images/rebrand/bg-sidebar-stealth.jpg") repeat scroll left top !important;
+}

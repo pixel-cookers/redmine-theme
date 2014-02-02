@@ -139,8 +139,8 @@ dt{
   &.issue-note { background-image: url(../images/icons/sticky-note-pin.png); }
   &.changeset { background-image: url(../images/icons/gear.png); }
   &.news { background-image: url(../images/icons/newspapers.png); }
-  &.message { background-image: url(../images/icons/ballon.png); }
-  &.reply { background-image: url(../images/icons/ballons.png); }
+  &.message { background-image: url(../images/icons/balloon.png); }
+  &.reply { background-image: url(../images/icons/balloons.png); }
   &.wiki-page { background-image: url(../images/icons/document--pencil.png); }
   &.attachment { background-image: url(../images/icons/paper-clip.png); }
   &.document { background-image: url(../images/icons/document.png); }
@@ -153,3 +153,95 @@ dt{
 a.feed{}
 .close-icon {}
 a.close-icon:hover {}
+
+@FontAwesomePath:    "../font";
+@FontAwesomePath:    "//netdna.bootstrapcdn.com/font-awesome/3.2.0/font";
+@FontAwesomeVersion: "3.2.0";
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?v=@{FontAwesomeVersion}');
+  src: url('@{FontAwesomePath}/fontawesome-webfont.eot?#iefix&v=@{FontAwesomeVersion}') format('embedded-opentype'),
+  url('@{FontAwesomePath}/fontawesome-webfont.woff?v=@{FontAwesomeVersion}') format('woff'),
+  url('@{FontAwesomePath}/fontawesome-webfont.ttf?v=@{FontAwesomeVersion}') format('truetype'),
+  url('@{FontAwesomePath}/fontawesome-webfont.svg#fontawesomeregular?v=@{FontAwesomeVersion}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-FontAwesome() {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: inherit;
+  -webkit-font-smoothing: antialiased;
+  *margin-right: .3em; // fixes ie7 issues
+}
+
+#main-menu {
+  ul {
+    li {
+      a {
+        &:before {
+          .icon-FontAwesome();
+          float: right;
+          margin-top: -5px;
+          font-size: 24px;
+        }
+        &.overview:before {
+          content: "\f0e4";
+        }
+        &.activity:before {
+          content: "\f018";
+        }
+        &.roadmap:before {
+          content: "\f187";
+        }
+        &.issues:before {
+          content: "\f145";
+        }
+        &.new-issue:before {
+          content: "\f188";
+        }
+        &.gantt:before {
+          content: "\f0ae";
+        }
+        &.calendar:before {
+          content: "\f073";
+        }
+        &.news:before {
+          content: "\f02d";
+        }
+        &.documents:before {
+          content: "\f15b";
+        }
+        &.wiki:before {
+          content: "\f036";
+        }
+        &.boards:before {
+          content: "\f075";
+        }
+        &.files:before {
+          content: "\f07c";
+        }
+        &.redmine-embedded:before {
+          content: "\f108";
+        }
+        &.redmine-monitoring-controlling:before {
+          content: "\f080";
+        }
+        &.tab:before {
+          content: "\f0a3";
+        }
+        &.repository:before {
+          content: "\f0b1";
+        }
+        &.code-review:before {
+          content: "\f121";
+        }
+        &.settings:before {
+          content: "\f0ad";
+        }
+      }
+    }
+  }
+}
