@@ -1,7 +1,7 @@
 /**
  * Pixel Cookers script for Redmine
  * author: Ludovic Meyer, Pixel Cookers - http://www.pixel-cookers.com
- * v2.1
+ * v3.0
  */
 (function($, document, undefined) {
 	$(document).ready(function() {
