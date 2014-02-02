@@ -5,19 +5,17 @@
  */
 
 @import url(../../../stylesheets/application.css);
-@import url(boilerplate.less);
+@import "boilerplate.less";
 
 // Variables
+@import "variables.less";
 
-@topMenuHeight: 30px;
-@headerWidth: 220px;
-@headerWidthHidden: 40px;
-
-@import url(rebrand/variables.less);
+// Left sidebar collapse
+//@import "sidebar.less";
 
 body {
   .lucida;
-  background: #F3F3F3;
+  background: #FEFEFE;
   color: #555555;
 }
 #wrapper {
@@ -43,23 +41,19 @@ a {
 
 // Structure
 #top-menu {
-  background: #0071BC;
-  border-bottom: 1px solid #858586;
-  font-size: 11px;
+  .trebuchet;
+  font-size: 12px;
   height: @topMenuHeight;
-  outline: 1px solid #3b3a3b;
   padding: 0;
   position: fixed;
   width: 100%;
   z-index: 20;
 
   a {
-    color: #DEDEDE;
     font-weight: normal;
-    padding: 9px 5px;
+    padding: 11px 5px;
 
     &:hover {
-      color: #fff;
       text-decoration: none;
     }
   }
@@ -72,11 +66,13 @@ a {
       color: #ddd;
       line-height: @topMenuHeight;
       margin-right: 4px;
+      text-transform: uppercase;
     }
   }
 
   #loggedas {
     color: #efefef;
+    font-weight: bold;
     height: @topMenuHeight;
     line-height: @topMenuHeight;
     margin: 0;
@@ -85,11 +81,24 @@ a {
       padding: 0;
     }
   }
+  #account {
+    ul {
+      margin-left: 0;
+      li {
+        text-transform: none;
+        a {
+          color: #aaa;
+
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
 }
 
 #header {
-  background: url(../images/bg-body.png) repeat-y scroll left top;
-  color: #888888;
   font-size: 11px;
   height: 100%;
   left: -(@headerWidth - @headerWidthHidden);
@@ -103,7 +112,6 @@ a {
 
   &:hover {
     .transition(left 100ms linear);
-    .box-shadow(0 0 10px rgba(0, 0, 0, 0.7));
     left: 0;
   }
 
@@ -136,12 +144,17 @@ a {
   }
 
   h1 {
-    .calibri;
-    color: #CCCCCC;
+    .trebuchet;
+    font-size: 24px;
     font-weight: bold;
-    margin: 15px;
-    text-align: right;
+    margin: 15px 0;
+    text-align: left;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
     z-index: 50;
+    a {
+      font-size: 14px;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    }
   }
 }
 
@@ -169,46 +182,46 @@ a {
 
 // Menu
 #main-menu {
-  .helvetica;
+  .trebuchet;
   margin: 0;
   padding: 0;
   position: relative;
   left: 0;
 
   ul {
-    margin-left: 5px;
+    margin-left: -15px;
 
     li {
       float: none;
       list-style-type: none;
       margin: 0;
-      padding-bottom: 10px;
+      padding-bottom: 2px;
       text-align: left;
 
       a {
-        .border-radius(5px 0 0 5px);
-        .box-shadow(-2px 1px 2px rgba(0,0,0,0.5));
         .user-select(none);
+        background: rgba(255, 255, 255, 0.3);
         border: none;
         color: #fff;
         cursor: pointer;
         display: block;
-        font-size: 14px;
+        font-size: 16px;
         font-weight: normal;
+        overflow: hidden;
         padding: 10px 15px;
         text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
 
         &:hover {
           .transition(padding-left 200ms linear);
+          background: rgba(0, 0, 0, 0.4);
           padding-left: 25px;
         }
         &:active {
-          .box-shadow(inset 2px 1px 2px rgba(0,0,0,0.5));
           border-bottom: 0\9;
           border-top: 1px solid #666\9;
         }
         &.selected, &.selected:hover {
-          background: #f3f3f3;
+          background: #FEFEFE;
           color: #333333;
           font-weight: bold;
           text-shadow: none;
@@ -219,7 +232,6 @@ a {
 }
 
 #footer {
-  background-color: #EEEEEE;
   border-top: 1px solid #CCCCCC;
   clear: left;
   color: #666666;
@@ -248,6 +260,8 @@ a {
 #content {
   h2, .wiki h1 {
     #gradient > .vertical(#ececec, #dedede);
+    .box-shadow(0 0 10px rgba(0,0,0,0.1));
+    .trebuchet;
     border-bottom: 1px solid #CCCCCC;
     color: #000;
     font-size: 17px;
@@ -255,6 +269,7 @@ a {
     margin-bottom: 10px;
     margin-left: -10px;
     margin-right: -10px;
+    text-shadow: 0 1px 0 #fff;
 
     &:first-of-type {
       .border-radius(6px 6px 0 0);
@@ -297,7 +312,9 @@ h3, h4 {
   font-weight: normal;
 }
 #sidebar h3 {
-  border-bottom: 1px solid #DCDCDC;
+  .trebuchet;
+  border-bottom: 2px solid rgba(41, 94, 130, 0.2);
+  font-weight: bold;
   padding: 6px 8px;
 }
 .wiki h3 {
@@ -742,10 +759,6 @@ tr.message.sticky td.subject {
 // Login
 #login-form {
   .border-radius(6px);
-  background: #181619 url(../images/pc-bg-big.png) top left repeat-x;
-  color: #cccccc;
-  height: 100%;
-  margin: -7px -10px -10px;
   min-height: 617px;
 
   table{
@@ -792,6 +805,5 @@ tr.message.sticky td.subject {
 
 @import url(icons.less);
 @import url(colors.less);
-//@import url(width1024.less);
 
-@import url(rebrand/pixel-cookers.less);
+//@import url(rebrand/pixel-cookers.less);
