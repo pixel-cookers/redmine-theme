@@ -100,13 +100,14 @@ a {
 
 #header {
   font-size: 11px;
-  height: 100%;
+  height: ~"calc(100% - 46px)";
   left: -(@headerWidth - @headerWidthHidden);
   padding-left: 9px;
   padding-right: 0;
-  padding-top: @topMenuHeight+2px;
+  margin-top: @topMenuHeight + @topMenuBorder;
   position: fixed;
   top: 0;
+  overflow-y: auto;
   width: @headerWidth;
   z-index: 10;
 

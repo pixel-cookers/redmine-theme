@@ -314,13 +314,14 @@ a.issue.closed:visited {
 }
 #header {
   font-size: 11px;
-  height: 100%;
+  height: calc(100% - 46px);
   left: 0px;
   padding-left: 9px;
   padding-right: 0;
-  padding-top: 42px;
+  margin-top: 46px;
   position: fixed;
   top: 0;
+  overflow-y: auto;
   width: 220px;
   z-index: 10;
 }
@@ -1510,7 +1511,7 @@ a:visited,
 /* Top bar */
 #top-menu {
   background: #222;
-  border-bottom: 6px solid #235F87;
+  border-bottom: 6px solid #235f87;
 }
 #top-menu a {
   color: #ddd;
