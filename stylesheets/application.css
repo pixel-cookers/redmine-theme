@@ -745,6 +745,9 @@ tr.closed,
 table.list tr.issue.closed a {
   color: #999;
 }
+tr.private {
+  border-left: 2px solid #d22;
+}
 td.username img.gravatar {
   float: none;
   vertical-align: middle;
