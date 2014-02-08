@@ -370,6 +370,7 @@ a.issue.closed:visited {
   margin: 15px 0;
   text-align: left;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+  word-wrap: break-word;
   z-index: 50;
 }
 #header h1 a {
