@@ -358,7 +358,7 @@ a.issue.closed:visited {
   max-width: 205px;
   padding: 0;
 }
-#header input[type="text"] {
+#header input[type="text"].small {
   font-size: 11px;
   padding: 2px 2px;
   width: 120px;
@@ -1104,39 +1104,6 @@ tr.message.sticky td.subject {
 .stopwatch-container #stopwatch {
   margin-right: 10px;
 }
-#banner_area {
-  overflow: hidden;
-  margin-left: 260px;
-  margin-right: 30px;
-  top: 50px;
-}
-#banner_area .banner {
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  border-radius: 6px;
-}
-#banner_area div#banner_edit {
-  z-index: 1;
-}
-#code-review-assign-link {
-  margin-bottom: 10px;
-}
-#project_quick_jump_box_chzn li {
-  text-align: left;
-  background-image: none;
-}
-#project_quick_jump_box_chzn a {
-  color: #000;
-}
-#project_quick_jump_box_chzn a:hover {
-  color: #000;
-}
-body.stealth_on #header {
-  background: #222 !important;
-}
-body.stealth_on #header {
-  background: #555;
-}
 .my-project {
   background-image: url(../images/icons/star.png);
 }
@@ -1598,4 +1565,40 @@ fieldset#date-range {
 /* Redmine Favourite Projects */
 .chzn-container .chzn-results .highlighted {
   background: #439edc;
+}
+#banner_area {
+  overflow: hidden;
+  margin-left: 260px;
+  margin-right: 30px;
+  top: 50px;
+}
+#banner_area .banner {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+#banner_area div#banner_edit {
+  z-index: 1;
+}
+#code-review-assign-link {
+  margin-bottom: 10px;
+}
+#project_quick_jump_box_chzn li,
+#project_quick_jump_box_chosen li {
+  text-align: left;
+  background-image: none;
+}
+#project_quick_jump_box_chzn a,
+#project_quick_jump_box_chosen a {
+  color: #000;
+}
+#project_quick_jump_box_chzn a:hover,
+#project_quick_jump_box_chosen a:hover {
+  color: #000;
+}
+body.stealth_on #header {
+  background: #222 !important;
+}
+body.stealth_on #header {
+  background: #555;
 }

@@ -138,7 +138,7 @@ a {
     max-width: @headerWidth - 15px;
     padding: 0;
   }
-  input[type="text"] {
+  input[type="text"].small {
     font-size: 11px;
     padding: 2px 2px;
     width: 120px;
@@ -801,13 +801,13 @@ tr.message.sticky td.subject {
   }
 }
 
+@import url(icons.less);
+@import url(colors.less);
+
 // Plugins
 @import url(plugins/banner.less);
 @import url(plugins/codereview.less);
 @import url(plugins/redmine_favourite_projects.less);
 @import url(plugins/redmine_stealth.less);
-
-@import url(icons.less);
-@import url(colors.less);
 
 //@import url(rebrand/pixel-cookers.less);
